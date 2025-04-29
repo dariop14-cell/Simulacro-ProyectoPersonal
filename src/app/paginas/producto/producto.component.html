@@ -1,1 +1,14 @@
 <p>producto works!</p>
+<div class="card-container">
+    <div *ngFor="let product of Producto; let i = index">
+        <div class="card">
+            <img src="{{ product.img }}">
+            <div class="card-body">
+            <h5>{{ product.nombre}}</h5>
+            <p>{{ product.descripcion }}</p>
+            <p>{{ product.precio }}</p>
+            <a href="#" class="btn btn-primary">Ver detalles</a>
+            </div>
+        </div>
+    </div>
+</div>
