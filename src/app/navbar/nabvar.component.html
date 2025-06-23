@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg" id="navbarprincipal">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/inicio">Inicio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" routerLink="/producto">Productos</a>
+                <a class="nav-link" routerLink="/novedades">Novedades</a>
+                <a class="nav-link" routerLink="/nuestraempresa">Nuestra Empresa</a>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-moon-fill" 
+            viewBox="0 0 16 16">
+            <path
+                d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+        </svg>
+        <form class="d-flex" role="search">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" >
+                <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg>
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
+        </form>
+        <button class="btn btn-primary" routerLink=>Iniciar Sesion</button>
+        <button class="btn btn-outline-success" type="submit">Registro</button>
+    </div>
+</nav>
