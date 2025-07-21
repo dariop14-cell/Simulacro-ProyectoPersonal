@@ -8,5 +8,15 @@ import { RouterLink } from '@angular/router';
   styleUrl: './nabvar.component.css'
 })
 export class NabvarComponent {
+  isDarkMode = false;
 
+  onToggleTheme(){
+    this.isDarkMode = !this.isDarkMode;
+
+    if(this.isDarkMode){
+      document.body.classList.add('modo-oscuro')
+    }else{
+      document.body.classList.remove('modo-oscuro')
+    }
+  }
 }
