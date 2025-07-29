@@ -16,31 +16,31 @@ export class ProductoComponent {
   producto: Producto[] = [
     {
       id: 1,
-      nombre:"Auriculares AIWA",
+      nombre:"Camiseta Scuderia Ferrari 2025",
       descripcion:"Auriculares Bluetooth Tipo Vincha (Bt301N-B)",
-      img:"https://acdn-us.mitiendanube.com/stores/884/018/products/gamma-hogar-2022-10-25t104326-7711-f545577cf5cc3a201b16667059054363-1024-1024.jpg",
+      img:"https://www.cmcmotorsports.com/cdn/shop/files/shop-t-shirt-menu_2048x.jpg?v=1747827398",
       precio:45000
     },
     {
       id:2,
-      nombre:"Televisor Smart TV UHD 4K Samsung 50 2025",
-      descripcion:"El televisor con mas aura de la historia, con ultra definicion",
-      img:"https://images.fravega.com/f300/eac2fd28fc788a516271773cecb1e8f0.jpg.webp",
+      nombre:"Buzo Aston Martin f1 2025",
+      descripcion:"Buzo del equipo de Fernando Alonso y Lance Stroll para la temporada 2025",
+      img:"https://fueler.store/cdn/shop/files/aston-martin-f1-2025-team-hoody-fuelertm-701233042001802-fueler-store-21350.jpg?v=1746020465&width=1080",
       precio:130000
     },
     {
       id:3,
-      nombre:"PC GAMER INTEL I7 10700 RTX 3060 RAM 16GB SSD 480GB",
-      descripcion:"Computadora gamer con todos los chiches para los gordos viciosos",
-      img:"https://electropc.com.ar/wp-content/uploads/DISENO-AVANZADO-PAGINA-jpg.webp",
+      nombre:"Remera Williams Racing 2025",
+      descripcion:"Remera del equipo britanico para la temporada 2025 de F1",
+      img:"https://driver1.com/cdn/shop/files/CamisetaPoloWilliamsRacingOficial2025.jpg?v=1739916403&width=600",
       precio:200000
     },
     {
       id:4,
-      nombre:"",
-      descripcion:"",
-      img:"https://www.megatone.net/Images/Articulos/zoom/209/KIT1657SSG.jpg?version=35",
-      precio: 20000
+      nombre:"Camiseta Mercedes AMG F1 team",
+      descripcion:"Camiseta del equipo mas dominante de la decada pasada",
+      img:"https://images.footballfanatics.com/mercedes-amg-petronas-f1-team/mercedes-amg-petronas-adidas-f1-2025-team-hoodie-black_ss5_p-202359124+u-p29ozrz5c7mpsl0nsiix+v-m7mhdcdj9zsx1lu9i6gi.jpg?_hv=2",
+      precio: 20000 
     }
   ]
 

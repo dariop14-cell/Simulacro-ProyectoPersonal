@@ -5,11 +5,12 @@
 }
 
 a{
-  color: white ;
+  color: rgb(0, 0, 0) ;
 }
 
-svg {
-  width: 16px;
+#logo1{
+  width: 55px;
+  height: 50px;
 }
 
 /* Apartado de busqueda */
@@ -30,7 +31,7 @@ svg {
   border: 2px solid transparent;
   border-radius: 8px;
   outline: none;
-  background-color: #f3f3f4;
+  background-color: #f3f3f4c2;
   color: #0d0c22;
   transition: 0.3s ease;
 }
@@ -153,7 +154,7 @@ button:active {
 
 /*Boton Cambiar Fondo*/
 .themeToggle {
-  color: #ffffff;
+  color: #424242;
   width: 2em;
   display: block;
   margin: auto;
