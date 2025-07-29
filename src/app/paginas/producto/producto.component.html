@@ -50,7 +50,8 @@
             <p>{{ product.descripcion }}</p>
             <p>{{ product.precio }}</p>
             <button type="button" class="btn-primary" (click)="agregar(product)">Agregar al carrito</button>
-            </div>
+            <button type="button" class="btn-outline-danger" (click)="agregarFavorito(product)">Agregar al listado de favoritos</button>
+        </div>
         </div>
     </div>
 </div>

@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Producto } from '../../model/productos.model';
 import { CarritoService } from '../../servicios/carrito.service';
+import { FavoritosService } from '../../servicios/favoritos.service';
 
 
 @Component({
@@ -43,9 +44,14 @@ export class ProductoComponent {
     }
   ]
 
-  constructor(private carritoService: CarritoService){ }
+  constructor(private carritoService: CarritoService, private favoritosService: FavoritosService){ }
   agregar(product: Producto){
     this.carritoService.agregarAlCarrito(product)
     alert('Producto agregado al carrito')
+  }
+
+  agregarFavorito(product: Producto){
+    this.favoritosService.agregarAfavoritos(product)
+    alert('Producto agregado a la lista de favoritos ')
   }
 }

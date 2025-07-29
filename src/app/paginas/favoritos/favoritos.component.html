@@ -1,0 +1,19 @@
+<h4>Bienvenido a tu listado de Favoritos</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of productosFavorito;let i = index">
+            <td><img [src]="item.producto.img" alt="{{item.producto.nombre}}" style="width: 50px; height: 50px;"></td>
+            <td>{{ item.producto.nombre }}</td>
+            <td>{{ item.producto.descripcion }}</td>
+            <td>{{ item.producto.precio }}</td>
+        </tr>
+    </tbody>
+</table>
