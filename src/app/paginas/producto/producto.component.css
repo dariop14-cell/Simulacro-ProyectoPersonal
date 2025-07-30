@@ -9,6 +9,11 @@
 /*Estilo de la tarjeta*/
 .card{
     width: 18rem;
+    height: 100%; /*Asegura la altura completa dentro del contenedor*/
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: rgb(0, 0, 0);
     color: white;
     border-radius: 10px;
@@ -50,7 +55,7 @@
 /*Boton "agregar al carrito*/
 #botonagregar {
     display: inline-block;
-    padding: 0.3rem 3.3rem;
+    padding: 0.3rem 3.6rem;
     font-size: 14px;
     font-weight: 700;
     color: white;
@@ -62,6 +67,7 @@
     overflow: hidden;
     z-index: 1;
     font-family: inherit;
+    margin-bottom: 10px;
 }
 
 .btn::before {
@@ -99,7 +105,47 @@
     font-family: inherit;
 }
 
+.btn-favoritos::before {
+    background-color: #0291ff; /* celeste */
+}
+
+.btn-favoritos:hover::before {
+    transform: translateX(0);
+}
+
 .imgcarrusel{
-    width: 400px;
-    height: 380px;
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto; /*centra orizontalmente*/
+    border-radius: 12px;
+}
+
+.encabezado{
+    width: 575px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contenedor-productos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-items: center;
+    padding: 15px;
+    gap:20px;
+}
+
+.carritoicon{
+    width: 45px;
+    height: auto;
+}
+
+.encabezado-container{
+    display: flex;
+    justify-content: space-between; /* separa el título del botón */
+    align-items: center;            /* alinea verticalmente al centro */
+    padding: 0 20px;
 }

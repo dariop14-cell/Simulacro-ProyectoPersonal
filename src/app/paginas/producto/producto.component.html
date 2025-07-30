@@ -1,60 +1,78 @@
-<div id="carouselExampleCaptions" class="carousel slide">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
+<div class="d-flex justify-content-center">
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block imgcarrusel"
+                    src="https://assets.redbullshop.com/f_auto,q_auto/t_teaser-card/content/RBR/2023/Official%20Teamline%20Launch/RBR_2023_OTL_Launch_Phase_2_Promo_Card.jpg"
+                    alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block imgcarrusel"
+                    src="https://www.modernretail.co/wp-content/uploads/sites/5/2023/07/Pacsun-x-Formula-1_Image-2-1-e1690564779598.jpg?w=1187&h=640&crop=1"
+                    alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block imgcarrusel" src="https://www.f1lasvegasgp.com/app/uploads/2024/10/Merch.jpg"
+                    alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="imgcarrusel" src="https://assets.redbullshop.com/f_auto,q_auto/t_teaser-card/content/RBR/2023/Official%20Teamline%20Launch/RBR_2023_OTL_Launch_Phase_2_Promo_Card.jpg" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img class="imgcarrusel" src="https://www.modernretail.co/wp-content/uploads/sites/5/2023/07/Pacsun-x-Formula-1_Image-2-1-e1690564779598.jpg?w=1187&h=640&crop=1" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img class="imgcarrusel" src="https://www.f1lasvegasgp.com/app/uploads/2024/10/Merch.jpg" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-            </div>
-        </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
 </div>
 
+<div class="encabezado-container">
+    <h3 class="encabezado">¡VEA NUESTRO CATALOGO DE PRODUCTOS!</h3>
 
-
-<h3>VEA NUESTRO CATALOGO DE PRODUCTOS</h3>
-<div class="card-container">
+    <button routerLink="/carrito">
+        <svg class="carritoicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+            <path
+                d="M24 48C10.7 48 0 58.7 0 72C0 85.3 10.7 96 24 96L69.3 96C73.2 96 76.5 98.8 77.2 102.6L129.3 388.9C135.5 423.1 165.3 448 200.1 448L456 448C469.3 448 480 437.3 480 424C480 410.7 469.3 400 456 400L200.1 400C188.5 400 178.6 391.7 176.5 380.3L171.4 352L475 352C505.8 352 532.2 330.1 537.9 299.8L568.9 133.9C572.6 114.2 557.5 96 537.4 96L124.7 96L124.3 94C119.5 67.4 96.3 48 69.2 48L24 48zM208 576C234.5 576 256 554.5 256 528C256 501.5 234.5 480 208 480C181.5 480 160 501.5 160 528C160 554.5 181.5 576 208 576zM432 576C458.5 576 480 554.5 480 528C480 501.5 458.5 480 432 480C405.5 480 384 501.5 384 528C384 554.5 405.5 576 432 576z" />
+        </svg>
+    </button>
+</div>
+<!--ENCONTRAR LA MANERA DE APLICARLE "DISABLED" AL BOTON CARRITO CUANDO EL CARRITO NO TIENE NADA-->
+<hr>
+<div class="card-container contenedor-productos">
     <div *ngFor="let product of producto; let i = index">
         <div class="card">
             <img src="{{ product.img }}">
             <div class="card-body">
-            <h5>{{ product.nombre}}</h5>
-            <p>{{ product.descripcion }}</p>
-            <p>{{ product.precio }}</p>
-            <!-- From Uiverse.io by ernestnash --> 
-            <a class="btn" (click)="agregar(product)" id="botonagregar">Agregar al carrito</a>
-            <a class="btn" (click)="agregarFavorito(product)" id="botonfavoritos">Agregar a la lista de favoritos</a>
-        </div>
+                <h5>{{ product.nombre}}</h5>
+                <p>{{ product.descripcion }}</p>
+                <p>{{ product.precio }} $</p>
+                <!-- From Uiverse.io by ernestnash -->
+                <a class="btn" (click)="agregar(product)" id="botonagregar">Agregar al carrito</a>
+                <a class="btn btn-favoritos" (click)="agregarFavorito(product)" id="botonfavoritos">Agregar a favoritos</a>
+            </div>
         </div>
     </div>
 </div>
