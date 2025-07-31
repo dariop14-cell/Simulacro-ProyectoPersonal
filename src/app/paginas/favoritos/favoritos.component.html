@@ -1,4 +1,8 @@
-<h4>Bienvenido a tu listado de Favoritos</h4>
+<h1>Bienvenido a tu listado de Favoritos</h1>
+<div *ngIf="productosFavorito.length === 0">
+    <h4>No hay productos en tu listado de Favoritos</h4>
+</div>
+
 <table class="table">
     <thead>
         <tr>

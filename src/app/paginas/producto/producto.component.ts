@@ -5,7 +5,7 @@ import { Producto } from '../../model/productos.model';
 import { CarritoService } from '../../servicios/carrito.service';
 import { FavoritosService } from '../../servicios/favoritos.service';
 
-
+  
 @Component({
   selector: 'app-producto',
   imports: [CommonModule,RouterModule,NgFor],

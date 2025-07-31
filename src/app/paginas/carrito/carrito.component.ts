@@ -45,13 +45,11 @@ export class CarritoComponent implements OnInit {
     this.vaciarCarrito()
   }
 
-  irAFormularioCompra(){
-    //Redirige al usuario a la ruta '/compra', donde se encuentra el formulario 
+  irAFormularioCompra(){ 
     this.router.navigate(['/compra'])
   }
 
   calcularTotal(): number{
-    //Recorre eñ arreglo de productos en el carrito y suma el resultado de (precio * cantidad) de cada item
     return this.productosEnCarrito.reduce((total,item) => {
       return total + item.producto.precio * item.cantidad
     }, 0 )

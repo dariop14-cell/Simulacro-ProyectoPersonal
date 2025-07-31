@@ -1,1 +1,17 @@
-<p>categorias works!</p>
+<h2>Mira aca los producto de tu equipo favorito</h2>
+<hr>
+<h5>McLaren Team</h5>
+<div class="card-container contenedor-productos">
+    <div *ngFor="let product of producto; let i = index">
+        <div class="card">
+            <img src="{{ product.img }}">
+            <div class="card-body">
+                <h5>{{ product.nombre }}</h5>
+                <p>{{ product.descripcion }}</p>
+                <p>{{ product.precio }} </p>
+                <a class="btn" (click)="agregar(product)" id="botonagregar">Agregar al carrito</a>
+                <a class="btn btn-favoritos" (click)="agregarFavorito(product)" id="botonfavoritos">Agregar a favoritos</a>
+            </div>
+        </div>
+    </div>
+</div>

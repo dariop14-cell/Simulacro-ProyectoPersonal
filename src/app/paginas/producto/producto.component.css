@@ -106,7 +106,7 @@
 } 
 
 .btn-favoritos::before {
-    background-color: #0291ff; /* celeste */
+    background-color: #0291ff; 
 }
 
 .btn-favoritos:hover::before {
