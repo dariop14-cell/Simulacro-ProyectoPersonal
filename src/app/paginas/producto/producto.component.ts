@@ -110,4 +110,5 @@ export class ProductoComponent {
     this.favoritosService.agregarAfavoritos(product)
     alert('Producto agregado a la lista de favoritos')
   }
+
 }

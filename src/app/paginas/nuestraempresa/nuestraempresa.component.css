@@ -1,0 +1,8 @@
+.nuestraempresa-container {
+  display: flex;                 /* Habilita Flexbox en el contenedor */
+  justify-content: space-between; /* Distribuye el espacio para que el texto y la imagen se separen a los extremos */
+  align-items: center;           /* Alinea los elementos verticalmente al centro (si tienen diferentes alturas) */
+  max-width: 950px;             /* O el ancho máximo que desees para esta sección */
+  margin: 0 auto;                /* Centra el contenedor completo en la página (opcional, si no ocupa el 100% del ancho) */
+  padding: 20px;                 /* Opcional: añade algo de relleno interno */
+}

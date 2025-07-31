@@ -40,6 +40,16 @@ export class CarritoComponent implements OnInit {
     this.carritoService.vaciarCarrito()
   }
 
+  realizarCompra(){
+    alert('Compra Realizada')
+    this.vaciarCarrito()
+  }
+
+  irAFormularioCompra(){
+    //Redirige al usuario a la ruta '/compra', donde se encuentra el formulario 
+    this.router.navigate(['/compra'])
+  }
+
   calcularTotal(): number{
     //Recorre eñ arreglo de productos en el carrito y suma el resultado de (precio * cantidad) de cada item
     return this.productosEnCarrito.reduce((total,item) => {

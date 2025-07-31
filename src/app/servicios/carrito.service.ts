@@ -28,6 +28,7 @@ export class CarritoService {
   vaciarCarrito() {
     this.carritoSubject.next([])
   }
+  
 
   //Metodo para actualizar la cantidad de productos en el carrito 
   actualizarCantidad(productoID: number, nuevaCantidad:number){

@@ -103,7 +103,7 @@
     overflow: hidden;
     z-index: 1;
     font-family: inherit;
-}
+} 
 
 .btn-favoritos::before {
     background-color: #0291ff; /* celeste */
@@ -139,7 +139,7 @@
 }
 
 .carritoicon{
-    width: 45px;
+    width: 45px; 
     height: auto;
 }
 
