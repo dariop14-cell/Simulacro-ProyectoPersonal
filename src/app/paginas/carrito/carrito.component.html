@@ -23,12 +23,12 @@
             <td>{{ item.producto.descripcion }}</td>
             <td>{{ item.producto.precio}}</td>
             <td>
-                <button (click)="quitarCantidad(i)">-</button>
+                <button class="btn-cantidad" (click)="quitarCantidad(i)">-</button>
                 {{item.cantidad}}
-                <button (click)="agregarCantidad(i)">+</button>
+                <button class="btn-aggcant" (click)="agregarCantidad(i)">+</button>
             </td>
             <td>
-                <button (click)="eliminarProducto(item.producto.id)">Eliminar</button>
+                <button class="btn-cantidad" (click)="eliminarProducto(item.producto.id)">Eliminar</button>
             </td>
         </tr>
     </tbody>

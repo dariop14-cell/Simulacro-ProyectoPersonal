@@ -46,7 +46,7 @@ export class ProductoComponent {
       id:5,
       nombre:"Camiseta Alpine Renault 2025",
       descripcion:"Camiseta de algodon del equipo de Franco Colapinto",
-      img:"https://afbmotorsport.com/131691-large_default/alpine-f1-men-s-navy-t-shirt.jpg",
+      img:"https://m.media-amazon.com/images/I/51cn72UGDpL._UY1000_.jpg",
       precio:20000
     },
     {
