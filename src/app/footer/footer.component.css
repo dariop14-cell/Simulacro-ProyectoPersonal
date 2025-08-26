@@ -1,6 +1,15 @@
-#footer1{
+#footer1 {
     background-color: black;
-    color:rgb(255, 255, 255);
+    color: white; /* Blanco para todo el footer */
     text-decoration: none;
     width: 100vw;
+}
+
+#footer1 a {
+    color: white; /* Links en blanco */
+    text-decoration: none;
+}
+
+#footer1 a:hover {
+    color: #ff0000; /* Puedes poner un color de hover (ej: rojo) */
 }

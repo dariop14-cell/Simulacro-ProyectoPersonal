@@ -16,29 +16,29 @@ export class ProductoComponent {
   producto: Producto[] = [
     {
       id: 1,
-      nombre:"Camiseta Scuderia Ferrari 2025",
-      descripcion:"Auriculares Bluetooth Tipo Vincha (Bt301N-B)",
+      nombre:"Camiseta Ferrari 2025",
+      descripcion:"Camiseta oficial de la 'Scuderia' temporada 2025",
       img:"https://www.cmcmotorsports.com/cdn/shop/files/shop-t-shirt-menu_2048x.jpg?v=1747827398",
       precio:45000
     },
     {
       id:2,
-      nombre:"Buzo Aston Martin f1 2025",
-      descripcion:"Buzo del equipo de Fernando Alonso y Lance Stroll para la temporada 2025",
+      nombre:"Buzo Aston Martin F1 2025",
+      descripcion:"Buzo oficial de Aston Martin temporada 2025",
       img:"https://fueler.store/cdn/shop/files/aston-martin-f1-2025-team-hoody-fuelertm-701233042001802-fueler-store-21350.jpg?v=1746020465&width=1080",
       precio:20000
     },
     {
       id:3,
       nombre:"Remera Williams Racing 2025",
-      descripcion:"Remera del equipo britanico para la temporada 2025 de F1",
+      descripcion:"Remera oficial Williams Racing 2025",
       img:"https://driver1.com/cdn/shop/files/CamisetaPoloWilliamsRacingOficial2025.jpg?v=1739916403&width=600",
       precio:20000
     },
     {
       id:4,
       nombre:"Camiseta Mercedes AMG F1 team",
-      descripcion:"Camiseta del equipo mas dominante de la decada pasada",
+      descripcion:"Camiseta oficial Mercedes AMG F1",
       img:"https://images.footballfanatics.com/mercedes-amg-petronas-f1-team/mercedes-amg-petronas-adidas-f1-2025-team-hoodie-black_ss5_p-202359124+u-p29ozrz5c7mpsl0nsiix+v-m7mhdcdj9zsx1lu9i6gi.jpg?_hv=2",
       precio: 20000 
     },
