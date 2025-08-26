@@ -6,3 +6,8 @@ export interface Producto {
     img: string
     cantidad?: number
 }
+
+export interface Categoria {
+    nombre: string
+    productos: Producto[];
+}
