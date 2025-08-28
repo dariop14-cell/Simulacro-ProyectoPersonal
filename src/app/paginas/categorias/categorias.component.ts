@@ -78,6 +78,39 @@ export class CategoriasComponent {
           precio: 40000
         }
       ]
+    },
+    {
+      nombre: "Red Bull Racing",
+      productos: [
+        {
+          id: 21,
+          nombre: "Camiseta polo Red Bull",
+          img: "https://fueler.store/cdn/shop/files/red-bull-racing-2024-team-polo-fuelertm-tm5288-s-fueler-store-33034.jpg?v=1746013453&width=1080",
+          descripcion: "Contiene algodon y poliester",
+          precio: 20000
+        },
+        {
+          id: 22,
+          nombre: "Buzo Red Bull F1 22'",
+          img: "https://m.media-amazon.com/images/I/71EAvOnJ1qL.jpg",
+          descripcion: "Buzo oficial del equipo del toro",
+          precio: 35000
+        },
+        {
+          id: 23,
+          nombre: "Remera RB Japanese GP",
+          img: "https://pitshop.mx/cdn/shop/files/ProductosPitshop-2025-05-24T114808.229.jpg?v=1748108541",
+          descripcion: "Camiseta edicion especial",
+          precio: 30000
+        },
+        {
+          id: 24,
+          nombre: "Red Bull F1 cap",
+          img: "https://tracksidegear.com/cdn/shop/files/RedbullcapF1Team6066922399SEVENTYhatnewera_1024x.jpg?v=1753418640",
+          descripcion: "Gorra Max Verstappen N°1",
+          precio: 15000
+        }
+      ]
     }
   ]
 
