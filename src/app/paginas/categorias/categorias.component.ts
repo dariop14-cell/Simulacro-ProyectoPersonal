@@ -14,7 +14,7 @@ import { FavoritosService } from '../../servicios/favoritos.service';
 export class CategoriasComponent {
   categorias: Categoria[] = [
     {
-      nombre: "Mclaren Team",
+      nombre: "McLAREN",
       productos: [
         {
           id: 13,
@@ -47,7 +47,7 @@ export class CategoriasComponent {
       ]
     },
     {
-      nombre: "Ferrari",
+      nombre: "FERRARI",
       productos: [
         {
           id: 17,
@@ -80,7 +80,7 @@ export class CategoriasComponent {
       ]
     },
     {
-      nombre: "Red Bull Racing",
+      nombre: "RED BULL RACING",
       productos: [
         {
           id: 21,
@@ -108,6 +108,39 @@ export class CategoriasComponent {
           nombre: "Red Bull F1 cap",
           img: "https://tracksidegear.com/cdn/shop/files/RedbullcapF1Team6066922399SEVENTYhatnewera_1024x.jpg?v=1753418640",
           descripcion: "Gorra Max Verstappen N°1",
+          precio: 15000
+        }
+      ]
+    },
+    {
+      nombre: "MERCEDES",
+      productos: [
+        {
+          id: 25,
+          nombre: "Merc' Team t-shirt",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScHdVi__DRGU61_qRZASvnq6vfg3A1YMtBQA&s",
+          descripcion: "Enginners t-shirt",
+          precio: 20000
+        },
+        {
+          id: 26,
+          nombre: "Camiseta de equipo 24'",
+          img: "https://fanabox.com/cdn/shop/files/701227950001_pp_02_MercedesFormula1.jpg?v=1741649132&width=1080",
+          descripcion: "Puma x Mercedes 2024",
+          precio: 30000
+        },
+        {
+          id: 27,
+          nombre: "Chaqueta Mercedes F1 22'",
+          img: "https://www.fuelforfans.com/on/demandware.static/-/Sites-master-catalog/default/dwfa63b412/images/large/701220701001_pp_01_mercedes-amg-f1-team.jpg",
+          descripcion: "En colaboración con Hugo Boss",
+          precio: 40000
+        },
+        {
+          id: 28,
+          nombre: "George Russell 63 cap",
+          img: "https://images.footballfanatics.com/mercedes-amg-petronas-f1-team/mercedes-amg-petronas-f1-2023-george-russell-cap-black_ss4_p-13368658+pv-1+u-1gtzdnq2r6qxkxa05mjn+v-c363588772c44276964c0fcc101523a8.jpg?_hv=2&w=900",
+          descripcion: "Replica oficial",
           precio: 15000
         }
       ]

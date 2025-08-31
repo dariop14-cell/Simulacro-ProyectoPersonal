@@ -146,3 +146,8 @@
     padding: 15px;
     gap:20px;
 }
+
+.titulo-categoria{
+    text-decoration: underline;
+    padding-left: 55px;
+}
