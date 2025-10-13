@@ -1,11 +1,11 @@
 #navbarprincipal {
-  background-color: #e30c0c;
+  background-color: #cc2f2f;
   color: aliceblue;
   text-decoration: none;
 }
 
 .navbar a {
-    color: #FFFFFF; /* Color BLANCO para alto contraste sobre el fondo rojo */
+    color: #FFFFFF; 
     text-decoration: none;
     transition: color 0.3s;
     font-family: 'Poppins', sans-serif;
@@ -16,11 +16,9 @@
 }
 
 .navbar-nav .nav-link.active {
-    color: #FFD700 !important; /* Color amarillo (Golden/Amarillo F1) */
-    text-decoration: underline; /* Añade el subrayado */
-    text-decoration-thickness: 2px; /* Opcional: Hace el subrayado más grueso */
-    text-underline-offset: 4px; /* Opcional: Separa un poco el subrayado del texto */
-}
+    color: #FFD700 !important; 
+        
+  }
 
 /* Opcional: También podrías querer que los enlaces normales cambien al pasar el ratón */
 .navbar a:hover {
@@ -173,7 +171,7 @@ button:active {
 
 /*Boton Cambiar Fondo*/
 .themeToggle {
-  color: #000000;
+  color: #ffffff;
   width: 2em;
   display: block;
   margin: auto;
