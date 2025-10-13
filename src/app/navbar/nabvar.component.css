@@ -5,18 +5,26 @@
 }
 
 .navbar a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  transition: color 0.3s;
-  font-family: 'Poppins', sans-serif;  
-  font-weight: 600;                    
-  font-size: 16px;                     
-  text-transform: uppercase;           
-  letter-spacing: 1px;                 
+    color: #FFFFFF; /* Color BLANCO para alto contraste sobre el fondo rojo */
+    text-decoration: none;
+    transition: color 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
+.navbar-nav .nav-link.active {
+    color: #FFD700 !important; /* Color amarillo (Golden/Amarillo F1) */
+    text-decoration: underline; /* Añade el subrayado */
+    text-decoration-thickness: 2px; /* Opcional: Hace el subrayado más grueso */
+    text-underline-offset: 4px; /* Opcional: Separa un poco el subrayado del texto */
+}
+
+/* Opcional: También podrías querer que los enlaces normales cambien al pasar el ratón */
 .navbar a:hover {
-  color:white;
+    color: #FFD700; /* Mismo amarillo al pasar el ratón */
 }
 
 #logo1{
