@@ -25,7 +25,7 @@ export class ProductoComponent {
       id:2,
       nombre:"Buzo Aston Martin F1 2025",
       descripcion:"Buzo oficial de Aston Martin temporada 2025",
-      img:"https://fueler.store/cdn/shop/files/aston-martin-f1-2025-team-hoody-fuelertm-701233042001802-fueler-store-21350.jpg?v=1746020465&width=1080",
+      img:"https://http2.mlstatic.com/D_NQ_NP_610550-MLA83307205810_042025-O.webp",
       precio:20000
     },
     {
@@ -105,7 +105,7 @@ export class ProductoComponent {
     this.carritoService.agregarAlCarrito(product)
     alert('Producto agregado al carrito')
   }
-
+ 
   agregarFavorito(product: Producto){
     this.favoritosService.agregarAfavoritos(product)
     alert('Producto agregado a la lista de favoritos')

@@ -113,14 +113,13 @@
     transform: translateX(0);
 }
 
-.imgcarrusel{
-    width: 100%;
-    max-width: 1200px;
-    height: 600px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto; /*centra orizontalmente*/
-    border-radius: 12px;
+.imgcarrusel {
+  width: 100vw;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  border-radius: 0;
 }
 
 .encabezado{
@@ -136,11 +135,6 @@
     justify-items: center;
     padding: 15px;
     gap:20px;
-}
-
-.carritoicon{
-    width: 45px; 
-    height: auto;
 }
 
 .encabezado-container{

@@ -20,7 +20,7 @@ export class FavoritosComponent implements OnInit{
       this.productosFavorito = productos;
     });
   }
-
+ 
   eliminarProducto(productoId: number) {
     this.favoritosService.eliminarDeFavoritos(productoId)
   }

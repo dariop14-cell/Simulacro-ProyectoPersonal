@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Producto } from '../model/productos.model';
 import { BehaviorSubject } from 'rxjs';
-
+  
 @Injectable({
   providedIn: 'root'
 })
