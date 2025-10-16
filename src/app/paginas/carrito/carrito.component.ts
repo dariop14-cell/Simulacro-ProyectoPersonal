@@ -21,7 +21,7 @@ export class CarritoComponent implements OnInit {
       this.productosEnCarrito = productos;
     })
   }
-
+ 
   agregarCantidad(index: number){
     this.productosEnCarrito[index].cantidad++;
   }
