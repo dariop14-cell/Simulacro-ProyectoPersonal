@@ -169,12 +169,34 @@ button:active {
   transition: 200ms;
 }
 
+.navbarIcons{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbarIcons button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.botonFavoritos svg,
+.botonCarrito svg{
+  color: white;
+}
+
 /*Boton Cambiar Fondo*/
 .themeToggle {
   color: #ffffff;
   width: 2em;
   display: block;
   margin: auto;
+  transform: translateY(4px);
 }
 
 .st-sunMoonThemeToggleBtn {
