@@ -10,9 +10,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link mx-2" routerLink="/producto" active>Productos</a>
+                <a class="nav-link mx-2" routerLink="/producto">Productos</a>
                 <a class="nav-link mx-2" routerLink="/categorias">Categorias</a>
-                <a class="nav-link mx-2" routerLink="/nuestraempresa">Nuestra Empresa</a>
+                <a class="nav-link mx-2" routerLink="/nuestraempresa">Nosotros</a>
             </div>
         </div>
 
@@ -73,7 +73,31 @@
         </div>
 
         <!-- Botones de Inicio de Sesion y Registro-->
-        <button class="mx-1" id="botonAcceder">Iniciar Sesion</button>
-        <button class="mx-1" id="botonRegistro">Registro</button>
+        <button type="button" class="btn-login mx-1" id="botonAcceder" (click)="abrirModal()">INICIAR SESION</button>
+
+        <!-- Modal -->
+        <div class="modal" *ngIf="mostrarModal">
+            <div class="modal-contenido">
+                <button type="button" class="cerrar" (click)="cerrarModal()">✖</button>
+
+                <h3>INGRESE SU CORREO:</h3>
+                <input type="email" placeholder="@email.com" />
+
+                <h3>INGRESE SU CONTRASEÑA:</h3>
+                <input type="password" placeholder="contraseña..." />
+
+                <p class="olvide">¿Olvidó su contraseña?</p>
+
+                <button type="button" class="btn-acceder">ACCEDER</button>
+
+                <div class="modal-footer">
+                    <span>Recordarme</span>
+                    <span>¿No tienes cuenta? <a href="#">Regístrate</a></span>
+                </div>
+            </div>
+        </div>
+
+
+        <button class="mx-1" id="botonRegistro">REGISTRO</button>
     </div>
 </nav>
