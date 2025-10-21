@@ -272,3 +272,125 @@ button:active {
     transform: scale(1);
   }
 }
+
+/*Modal Inicio de Sesion*/
+.modal-login {
+  background-color: #f1f3f6; /* gris claro */
+  border: 2px solid red; /* borde rojo como en tu imagen */
+  border-radius: 12px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  border-bottom: none;
+  justify-content: center;
+}
+
+.modal-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal-body h3 {
+  font-size: 15px;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #000;
+}
+
+.modal-body input {
+  width: 90%;
+  padding: 8px;
+  margin: 5px 0 10px;
+  border: 2px solid #000;
+  border-radius: 6px;
+  outline: none;
+}
+
+.modal-body input::placeholder {
+  color: #555;
+}
+
+.olvide {
+  text-align: center;
+  font-size: 12px;
+  color: #000;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.btn-acceder {
+  background-color: #1a41d8;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 0;
+  width: 90%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-acceder:hover {
+  background-color: #1636b8;
+}
+
+.modal-footer {
+  border-top: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 15px 5px;
+  font-size: 12px;
+}
+
+.modal-footer .der{
+  font-weight:bold ;
+}
+
+.modal-footer .der a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 11px;
+}
+
+.modal-footer .der a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.modal-footer .izq{
+  font-weight:bold ;
+  text-decoration: underline;
+}
+
+.btn-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-weight:bold ;
+}
+
+/* Fondo difuminado detrás del modal */
+.fondo-desenfocado {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* leve oscurecimiento */
+  backdrop-filter: blur(8px);      /* efecto de desenfoque */
+  -webkit-backdrop-filter: blur(8px); /* compatibilidad Safari */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050; /* por encima del contenido */
+}
+
+ /* Asegura que el modal quede encima del fondo desenfocado */
+.modal-dialog {
+  z-index: 1060;
+}

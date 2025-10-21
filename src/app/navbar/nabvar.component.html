@@ -72,32 +72,50 @@
             <input class="input" type="search" placeholder="Buscar" />
         </div>
 
-        <!-- Botones de Inicio de Sesion y Registro-->
+        <!-- Botones de Inicio de Sesion-->
         <button type="button" class="btn-login mx-1" id="botonAcceder" (click)="abrirModal()">INICIAR SESION</button>
 
-        <!-- Modal -->
-        <div class="modal" *ngIf="mostrarModal">
-            <div class="modal-contenido">
-                <button type="button" class="cerrar" (click)="cerrarModal()">✖</button>
-
-                <h3>INGRESE SU CORREO:</h3>
-                <input type="email" placeholder="@email.com" />
-
-                <h3>INGRESE SU CONTRASEÑA:</h3>
-                <input type="password" placeholder="contraseña..." />
-
-                <p class="olvide">¿Olvidó su contraseña?</p>
-
-                <button type="button" class="btn-acceder">ACCEDER</button>
-
-                <div class="modal-footer">
-                    <span>Recordarme</span>
-                    <span>¿No tienes cuenta? <a href="#">Regístrate</a></span>
+        <!--Modal de Inicio de sesion-->
+        <div *ngIf="mostrarModal" class="modal show d-block fondo-desenfocado" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content modal-login">
+        
+                    <!-- CABECERA DEL MODAL -->
+                    <div class="modal-header">
+                        <h5 class="modal-title">Iniciar Sesión</h5>
+                        <button type="button" class="btn-close" aria-label="Close" (click)="cerrarModal()">X</button>
+                    </div>
+        
+                    <!-- CUERPO DEL MODAL -->
+                    <div class="modal-body text-center">
+        
+                        <h3>INGRESE SU CORREO:</h3>
+                        <input type="email" placeholder="@email.com" />
+        
+                        <h3>INGRESE SU CONTRASEÑA:</h3>
+                        <input type="password" placeholder="contraseña..." />
+        
+                        <p class="olvide">¿Olvidó su contraseña?</p>
+        
+                        <button type="button" class="btn-acceder">ACCEDER</button>
+                    </div>
+        
+                    <!-- PIE DEL MODAL -->
+                    <div class="modal-footer">
+                        <span class="izq">Recordarme</span>
+                        <span class="der">¿No tienes cuenta? <a href="#">Registrate</a></span>
+                    </div>
+        
                 </div>
             </div>
         </div>
 
-
+        <!--Boton de Registro-->
         <button class="mx-1" id="botonRegistro">REGISTRO</button>
+
+        <!--Modal de Registro-->
+
+
+
     </div>
 </nav>
