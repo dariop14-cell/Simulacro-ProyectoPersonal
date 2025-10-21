@@ -9,13 +9,34 @@ import { CommonModule } from '@angular/common';
   styleUrl: './nabvar.component.css'
 })
 export class NabvarComponent {
-  mostrarModal: boolean = false;
+  mostrarModalSesion: boolean = false;
 
-  abrirModal(){
-    this.mostrarModal = true;
+  abrirModalSesion(){
+    this.mostrarModalSesion = true;
   }
 
-  cerrarModal(){
-    this.mostrarModal = false;
+  cerrarModalSesion(){
+    this.mostrarModalSesion = false;
+  }
+
+  redireccionRegistro(){
+    this.mostrarModalSesion = false;
+    this.mostrarModalRegistro = true;
+  }
+
+
+  mostrarModalRegistro = false;
+
+  abrirModalRegistro() {
+    this.mostrarModalRegistro = true;
+  }
+
+  cerrarModalRegistro() {
+    this.mostrarModalRegistro = false;
+  }
+
+  abrirModalLogin() {
+    this.mostrarModalRegistro = false;
+    this.mostrarModalSesion = true; 
   }
 }
