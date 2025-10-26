@@ -21,7 +21,7 @@
             </td>
             <td>{{ item.producto.nombre }}</td>
             <td>{{ item.producto.descripcion }}</td>
-            <td>{{ item.producto.precio}}</td>
+            <td>{{ item.producto.precio | number: '1.2-2'}}$</td>
             <td>
                 <button class="btn-cantidad" (click)="quitarCantidad(i)">-</button>
                 {{item.cantidad}}
@@ -36,10 +36,5 @@
 <button (click) = "realizarCompra()" class="btn btn-success agregacion" [disabled]="productosEnCarrito.length === 0">Realizar Compra</button>
 
 <div class="text-end mt-4" *ngIf="productosEnCarrito.length > 0">
-    <h4 class="fw-bold">Total : {{ calcularTotal() }}</h4>
-<!--
-    <button class="btn btn-primary mt-2" (click)="irAFormularioCompra()">
-    <i class="bi bi-cart-check"></i>Realizar Compra
-</button>
--->
+    <h4 class="fw-bold">Total : {{ calcularTotal() | number: '1.2-2' }} ARS $</h4>
 </div>

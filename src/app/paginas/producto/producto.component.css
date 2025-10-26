@@ -1,125 +1,109 @@
-.card-container{
+    .card-container {
     display: flex;
-    justify-content: center;/*centra orizontalmente las tarjetas*/
-    gap: 20px;
     flex-wrap: wrap;
-    padding: 20px;
-}
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
+    padding: 1rem;
+    }
 
-/*Estilo de la tarjeta*/
-.card{
-    width: 18rem;
-    height: 100%; /*Asegura la altura completa dentro del contenedor*/
-    min-height: 520px;
+    /* ==== TARJETA ==== */
+    .card {
+    width: 260px;
+    background-color: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    }
+
+    .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    }
+
+    .card-body {
+    padding: 1rem;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(255,255,255,0.2);
-}
-
-.card.hover{
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-}
-
-/*Imagen dentro de la tarjeta*/
-.card .img{
-    background-color: yellow;
-    width: 200px;
-}
-
-.card .btn{
-    background-color: rgb(0, 179, 255);
-    color: #222;
-    border: none;
-    transition: background 0.3s ease-in-out;
-}
-
-.card .btn:hover{
-    background-color: rgba(255, 255, 0, 0.011);
-}
-
-/*responsabilidad en pantalla chica*/
-@media(max-width:600px){
-    .card-container{
-        flex-direction: column;
-        align-items: center;
+    flex-grow: 1;
     }
-}
 
-/*Boton "agregar al carrito*/
-#botonagregar {
-    display: inline-block;
-    padding: 0.3rem 3.6rem;
-    font-size: 14px;
+    .card-body h5 {
+    font-size: 1.1rem;
     font-weight: 700;
-    color: white;
-    border: 3px solid rgb(252, 70, 100);
-    cursor: pointer;
-    position: relative;
-    background-color: transparent;
-    text-decoration: none;
-    overflow: hidden;
-    z-index: 1;
-    font-family: inherit;
-    margin-bottom: 10px;
-}
+    color: #111;
+    margin: 0.5rem 0;
+    }
 
-.btn::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(252, 70, 100);
-    transform: translateX(-100%);
-    transition: all .3s;
-    z-index: -1;
-}
+    .card-body p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    min-height: 36px;
+    }
 
-.btn:hover::before {
-    transform: translateX(0);
-}
+    .card-body h5:last-of-type {
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 1rem;
+    }
 
-/*Boton Favoritos*/
-
-#botonfavoritos{
-    display: inline-block;
-    padding: 0.3rem 3.3rem;
-    font-size: 14px;
+    /* ==== BOTONES ==== */
+    .card-body .btn {
+    display: block;
+    text-align: center;
+    padding: 10px 16px;
+    border-radius: 8px;
     font-weight: 700;
-    color: rgb(255, 255, 255);
-    border: 3px solid rgb(252, 70, 100);
-    cursor: pointer;
-    position: relative;
-    background-color: transparent;
     text-decoration: none;
-    overflow: hidden;
-    z-index: 1;
-    font-family: inherit;
-} 
+    transition: all 0.2s ease;
+    cursor: pointer;
+    }
 
-.btn-favoritos::before {
-    background-color: #0291ff; 
-}
+    /* Botón principal */
+    .btn#botonagregar {
+    background-color: #1f6feb;
+    color: #fff;
+    border: none;
+    margin-bottom: 0.5rem;
+    }
 
-.btn-favoritos:hover::before {
-    transform: translateX(0);
-}
+    .btn#botonagregar:hover {
+    background-color: #155ac8;
+    }
+
+    /* Botón de favoritos (outline) */
+    .btn#botonfavoritos {
+    border: 2px solid #1f6feb;
+    color: #1f6feb;
+    background-color: transparent;
+    }
+
+    .btn#botonfavoritos:hover {
+    background-color: #1f6feb;
+    color: #fff;
+    }
 
 .imgcarrusel {
-  width: 100vw;
-  height: 600px;
-  object-fit: cover;
-  display: block;
-  margin: 0;
-  border-radius: 0;
+    width: 100vw;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    border-radius: 0;
 }
 
 .encabezado{

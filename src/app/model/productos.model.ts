@@ -7,7 +7,7 @@ export interface Producto {
     cantidad?: number
 }
 
-export interface Categoria {
+export interface Equipo {
     nombre: string
     productos: Producto[];
 }

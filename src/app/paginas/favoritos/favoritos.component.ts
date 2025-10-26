@@ -20,14 +20,18 @@ export class FavoritosComponent implements OnInit{
       this.productosFavorito = productos;
     });
   }
- 
+
   eliminarProducto(productoId: number) {
     this.favoritosService.eliminarDeFavoritos(productoId)
+  }
+
+    vaciarFavoritos(){
+    this.favoritosService.vaciarFavoritos()
   }
 
   agregar(producto: Producto){
     this.carritoService.agregarAlCarrito(producto)
     alert('Producto agregado al carrito')
+    this.favoritosService.eliminarDeFavoritos(producto.id)
   }
-   
 }

@@ -17,7 +17,7 @@
             <td><img [src]="item.producto.img" alt="{{ item.producto.nombre }}" style="width: 50px; height: 50px;"></td>
             <td>{{ item.producto.nombre }}</td>
             <td>{{ item.producto.descripcion }}</td>
-            <td>{{ item.producto.precio }}</td>
+            <td>{{ item.producto.precio | number: '1.2-2'}}$</td>
             <td>
                 <button class="btn btn-success subircarrito" (click)="agregar(item.producto)" id="subiralcarrito">Agregar al carrito</button>
             </td>

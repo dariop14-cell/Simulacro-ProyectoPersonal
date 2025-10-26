@@ -97,6 +97,62 @@ export class ProductoComponent {
       descripcion: "Camiseta de algodon mangas largas",
       img:"https://paddockcollectionstore.com/cdn/shop/products/701219237001_PP_1_MERCEDES_GREY.jpg?v=1645123360",
       precio:20000
+    },
+    {
+      id:29,
+      nombre:"RedBull RB16B 2021",
+      descripcion: "Modelo escala 1:43",
+      img: "https://tiendaf1mdsports.cl/wp-content/uploads/2023/06/Burago_1_43_RedBull_RB16b_Verstappen_Caja_Acrilica_4.jpg",
+      precio:40000
+    },
+    {
+      id:32,
+      nombre: "Ferrari F1-75",
+      descripcion: "Modelo escala 1:43",
+      img: "https://tiendaf1mdsports.cl/wp-content/uploads/2023/05/Burago_1_43_Ferrari_F1-75_Special_Leclerc_Caja_Acrilica_4-scaled.jpg",
+      precio: 40000
+    },
+    {
+      id:30,
+      nombre:"Alpine A523 2023",
+      descripcion: "Modelo escala 1:43",
+      img: "https://tiendaf1mdsports.cl/wp-content/uploads/2023/10/Burago_1_43_Alpine_A523_Gasly_2023_Caja_Acrilica_4.jpg",
+      precio: 40000
+    },
+    {
+      id:31,
+      nombre: "Alfa Romeo C43",
+      descripcion: "Modelo escala 1:43",
+      img: "https://tiendaf1mdsports.cl/wp-content/uploads/2023/11/Burago_1_43_AlfaRomeo_C43_Zhou_2023_Caja_Acrilica_4.jpg",
+      precio: 40000
+    },
+    {
+      id:33,
+      nombre:"Gorra Ferrari",
+      descripcion: "Lewis Hamilton edition",
+      img: "https://images.footballfanatics.com/scuderia-ferrari/scuderia-ferrari-2025-team-lewis-hamilton-cap-red_ss5_p-202358980+u-cyv4xtwh0yojc1dmjekk+v-irkryngn7dusjeqb7lx8.jpg?_hv=2&w=532",
+      precio:10000
+    },
+    {
+      id:34,
+      nombre:"Gorra Red Bull",
+      descripcion: "Max Verstappen version",
+      img:"https://images.footballfanatics.com/red-bull-racing/red-bull-racing-new-era-max-verstappen-9seventy-piped-cap-navy-kids_ss5_p-202169039+u-tqeqnqjmkeawkjjafl0w+v-kbjgfsxx5rkn8bpmi9dz.jpg?_hv=2&w=532",
+      precio: 10000
+    },
+    {
+      id:35,
+      nombre: "Gorra McLaren",
+      descripcion: "Black version",
+      img: "https://images.footballfanatics.com/mclaren-f1-team/mclaren-new-era-seasonal-9forty-cap-black_ss5_p-203468589+pv-1+u-6srn9wwmxafkqyhmvnx3+v-rcifmcommqlv6lts0yub.jpg?_hv=2&w=1018",
+      precio: 10000
+    },
+    {
+      id:36,
+      nombre:"Gorra Mercedes",
+      descripcion: "George Russell edition",
+      img: "https://images.footballfanatics.com/mercedes-amg-petronas-f1-team/mercedes-amg-petronas-adidas-f1-2025-george-russell-cap-blue_ss5_p-202359132+u-rex1kcwwuoi9wrbh1q6l+v-llugqwwqj7jr871ecqyt.jpg?_hv=2&w=532",
+      precio: 10000
     }
   ]
 
@@ -105,7 +161,7 @@ export class ProductoComponent {
     this.carritoService.agregarAlCarrito(product)
     alert('Producto agregado al carrito')
   }
- 
+
   agregarFavorito(product: Producto){
     this.favoritosService.agregarAfavoritos(product)
     alert('Producto agregado a la lista de favoritos')

@@ -16,7 +16,7 @@
             <div class="card-body">
                 <h5>{{ product.nombre}}</h5>
                 <p>{{ product.descripcion }}</p>
-                <h5>{{ product.precio | number: '1.2-2' }}$</h5>
+                <h5>{{ product.precio | number: '1.2-2' }} ARS $</h5>
                 <a class="btn" (click)="agregar(product)" id="botonagregar">Agregar al carrito</a>
                 <a class="btn btn-favoritos" (click)="agregarFavorito(product)" id="botonfavoritos">Agregar a favoritos</a>
             </div>

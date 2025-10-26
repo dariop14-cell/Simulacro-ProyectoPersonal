@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule, NgFor } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { Categoria, Producto } from '../../model/productos.model';
+import { Equipo, Producto } from '../../model/productos.model';
 import { CarritoService } from '../../servicios/carrito.service';
 import { FavoritosService } from '../../servicios/favoritos.service';
 
@@ -12,7 +12,7 @@ import { FavoritosService } from '../../servicios/favoritos.service';
   styleUrl: './categorias.component.css'
 })
 export class CategoriasComponent {
-  categorias: Categoria[] = [
+  categorias: Equipo[] = [
     {
       nombre: "McLAREN",
       productos: [
@@ -85,7 +85,7 @@ export class CategoriasComponent {
         {
           id: 21,
           nombre: "Camiseta polo Red Bull",
-          img: "https://fueler.store/cdn/shop/files/red-bull-racing-2024-team-polo-fuelertm-tm5288-s-fueler-store-33034.jpg?v=1746013453&width=1080",
+          img: "https://m.media-amazon.com/images/I/61XFSohAr5L._AC_SL1500_.jpg",
           descripcion: "Contiene algodon y poliester",
           precio: 20000
         },

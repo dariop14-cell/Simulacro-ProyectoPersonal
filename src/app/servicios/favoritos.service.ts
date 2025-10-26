@@ -24,5 +24,9 @@ export class FavoritosService {
     const productos = this.favoritosSubject.getValue().filter(p => p.producto.id !== productoId)
     this.favoritosSubject.next(productos)
   }
+
+  vaciarFavoritos(){
+    this.favoritosSubject.next([])
+  }
   constructor() { }
 }
