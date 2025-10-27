@@ -39,9 +39,9 @@ export class CategoriasComponent {
         },
         { 
           id:16,
-          nombre: "Camiseta Mclaren F1 Miami",
-          img: "https://www.cmcmotorsports.com/cdn/shop/files/tcrw6016-clbyypppmtwh_1.jpg?v=1682514396",
-          descripcion: "Edicion especial para el GP",
+          nombre: "Camiseta Mclaren Senna",
+          img: "https://www.fuelforfans.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog/default/dw3b2e929e/images/large/701234832001_pp_01_mclarensennamonacoyellow.jpg?sw=800&sh=800&sm=fit",
+          descripcion: "Senna tribute edition Monaco 2024",
           precio: 35000
         }
       ]
@@ -53,7 +53,7 @@ export class CategoriasComponent {
           id: 17,
           nombre: "Camiseta Scuderia Ferrari",
           img: "https://www.theraceworks.com/cdn/shop/files/701232808001_PP_1_FERRARI_763951_01-scaled.jpg?v=1741399655&width=2560",
-          descripcion: "Merch oficial para la temporada 25'",
+          descripcion: "Edicion oficial temporada 2025",
           precio: 30000
         },
         {
@@ -65,16 +65,16 @@ export class CategoriasComponent {
         },
         {
           id: 19,
-          nombre: "Camiseta Ferrari Monza 24",
+          nombre: "Camiseta Ferrari",
           img: "https://www.rallymerchandise.eu/hpeciai/36e64ae20629306bc78500b3326fd763/eng_pl_2024-Ferrari-F1-Mens-Monza-GP-T-Shirt-21373_2.jpg",
-          descripcion: "Edicion especial para el GP italiano",
+          descripcion: "Edicion especial Monza 2024",
           precio: 35000
         },
         {
           id: 20,
-          nombre: "Buzo frizza Ferrari 25",
+          nombre: "Buzo frizza Ferrari",
           img: "https://formulaentreamigos.com/wp-content/uploads/2025/02/701232805001_PP_1_FERRARI_763941_01-scaled.jpg",
-          descripcion: "Buzo estilo frizado de la Scuderia",
+          descripcion: "Estilo frizado 2025",
           precio: 40000
         }
       ]
@@ -91,15 +91,15 @@ export class CategoriasComponent {
         },
         {
           id: 22,
-          nombre: "Buzo Red Bull F1 22'",
-          img: "https://m.media-amazon.com/images/I/71EAvOnJ1qL.jpg",
-          descripcion: "Buzo oficial del equipo del toro",
+          nombre: "Buzo Red Bull Racing 2022'",
+          img: "https://m.media-amazon.com/images/I/61TdyCu5iaL._AC_UY1000_.jpg",
+          descripcion: "Mercancia oficial para la temporada 2022",
           precio: 35000
         },
         {
           id: 23,
           nombre: "Remera RB Japanese GP",
-          img: "https://pitshop.mx/cdn/shop/files/ProductosPitshop-2025-05-24T114808.229.jpg?v=1748108541",
+          img: "https://www.cmcmotorsports.com/cdn/shop/files/TU14431-001-01.jpg?v=1743189466",
           descripcion: "Camiseta edicion especial",
           precio: 30000
         },
@@ -117,29 +117,29 @@ export class CategoriasComponent {
       productos: [
         {
           id: 25,
-          nombre: "Merc' Team t-shirt",
+          nombre: "Camiseta Mercedes 2025",
           img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScHdVi__DRGU61_qRZASvnq6vfg3A1YMtBQA&s",
-          descripcion: "Enginners t-shirt",
+          descripcion: "Edicion 'enginner'",
           precio: 20000
         },
         {
           id: 26,
           nombre: "Camiseta de equipo 24'",
           img: "https://fanabox.com/cdn/shop/files/701227950001_pp_02_MercedesFormula1.jpg?v=1741649132&width=1080",
-          descripcion: "Puma x Mercedes 2024",
+          descripcion: "Puma x Mercedes White",
           precio: 30000
         },
         {
           id: 27,
-          nombre: "Chaqueta Mercedes F1 22'",
-          img: "https://www.fuelforfans.com/on/demandware.static/-/Sites-master-catalog/default/dwfa63b412/images/large/701220701001_pp_01_mercedes-amg-f1-team.jpg",
-          descripcion: "En colaboración con Hugo Boss",
+          nombre: "Chaqueta Mercedes F1",
+          img: "https://m.media-amazon.com/images/I/71cVy62YW4L._UY1000_.jpg",
+          descripcion: "Edicion SoftShell x Puma",
           precio: 40000
         },
         {
           id: 28,
           nombre: "George Russell 63 cap",
-          img: "https://images.footballfanatics.com/mercedes-amg-petronas-f1-team/mercedes-amg-petronas-f1-2023-george-russell-cap-black_ss4_p-13368658+pv-1+u-1gtzdnq2r6qxkxa05mjn+v-c363588772c44276964c0fcc101523a8.jpg?_hv=2&w=900",
+          img: "https://starniza.com/wp-content/uploads/2022/10/WhatsApp-Image-2022-10-12-at-4.36.58-PM.jpeg",
           descripcion: "Replica oficial",
           precio: 15000
         }
