@@ -5,6 +5,8 @@ export interface Producto {
     precio: number
     img: string
     cantidad?: number
+    categoria: string
+    equipo: string
 }
 
 export interface Equipo {

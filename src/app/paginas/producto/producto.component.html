@@ -9,6 +9,7 @@
 </div>
 
 <hr>
+
 <div class="card-container contenedor-productos">
     <div *ngFor="let product of producto; let i = index">
         <div class="card">
@@ -23,4 +24,58 @@
         </div>
     </div>
 </div>
+<!--
+<div class="filtros">
+    <div class="row mb-3">
+        <div class="col-md-3">
+            <label>Categoria:</label>
+            <select class="form-select" [(ngModel)]="selectedCategory" name="categoria">
+                <option value="">Todas</option>
+                <option *ngFor="let categoria of categoria" [value]="categoria">{{ categoria }}</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label>Equipo:</label>
+            <select class="form-select" [(ngModel)]="selectedBrand" name="equipo">
+                <option value="">Todas</option>
+                <option *ngFor="let equipo of equipo" [value]="equipo">{{ equipo }}</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label>Precio min:</label>
+            <input type="number" class="form-control" [(ngModel)]="minprecio" name="minprecio">
+        </div>
+        <div class="col-md-2">
+            <label>Precio Max:</label>
+            <input type="number" class="form-control" [(ngModel)]="maxprecio" name="maxprecio">
+        </div>
+        <div class="col-md-2 d-flex align-items-end">
+            <button class="btn btn-secondary w-100" (click)="resetFilters()">
+                <div class="button-top">Limpiar</div>
+            </button>
+        </div>
+    </div>
+</div>
 
+<div class="card-container contenedor-productos">
+    <ng-container *ngIf="filteredProducts && filteredProducts.length;">
+        <div *ngFor="let product of filteredProducts; let i = index" class="card">
+            <img [src]="product.img" [alt]="product.nombre" class="card-img" />
+            <div class="card-body">
+                <h5>{{ product.nombre }}</h5>
+                <p>{{ product.descripcion }}</p>
+                <h5>{{ product.precio | number: '1.2-2' }} ARS $</h5>   
+                <a class="btn" (click)="agregar(product)" id="botonagregar">
+                    Agregar al carrito
+                </a>
+                <a class="btn btn-favoritos" (click)="agregarFavorito(product)" id="botonfavoritos">
+                    Agregar a favoritos
+                </a>
+            </div>
+        </div>
+    </ng-container>
+    <div *ngIf="filteredProducts.length === 0" class="text-muted">
+        No se encontraron productos que coincidan con los filtros.
+    </div>
+</div>
+-->
