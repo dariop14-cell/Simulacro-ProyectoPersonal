@@ -119,42 +119,9 @@ button {
   position: absolute;
 }
 
-/*Boton acceder*/ 
-#botonAcceder{
-  padding: 10px 20px;
-  border-radius: 4px;
-  border: 0;
-  background-color: rgb(28, 142, 236);
-  letter-spacing: 1.5px;
-  font-size: 13px;
-  transition: all 0.3s ease;
-  color: hsl(0, 0%, 100%);
-  cursor: pointer;
-}
-
-button:hover {
-  box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
-}
-
-button:active {
-  background-color: rgb(255, 56, 86);
-  /*50, 168, 80*/
-  box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
-  transform: translateY(5px);
-  transition: 200ms;
-}
-
-/*Boton Registro*/
-#botonRegistro{
-  padding: 10px 20px;
-  border-radius: 4px;
-  border: 0;
-  background-color: rgb(13, 163, 50);
-  letter-spacing: 1.5px;
-  font-size: 13px;
-  transition: all 0.3s ease;
-  color: hsl(0, 0%, 100%);
-  cursor: pointer;
+.btn-login svg {
+  fill: white;
+  color: white;
 }
 
 button:hover {
