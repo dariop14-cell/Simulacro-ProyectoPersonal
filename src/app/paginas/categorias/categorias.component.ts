@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule,NgClass, NgFor } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { Equipo, Producto } from '../../model/productos.model';
+import { Equipo } from '../../model/equipos.model';
+import { Producto } from '../../model/productos.model';
 import { CarritoService } from '../../servicios/carrito.service';
 import { FavoritosService } from '../../servicios/favoritos.service';
 import { FormsModule } from '@angular/forms';
@@ -83,7 +84,7 @@ export class CategoriasComponent {
           descripcion: "Edicion especial Monza 2024",
           precio: 35000,
           categoria: "Camiseta",
-          equipo: "Camiseta"
+          equipo: "Ferrari"
         },
         {
           id: 20,
@@ -198,12 +199,16 @@ selectedBrand: string = '';
 minprecio: number | null = null;
 maxprecio: number | null = null;
 
+get productos(): Producto[]{
+  return this.categorias.flatMap(equipo => equipo.productos)
+}
+
 get categoria(): string[]{
-  return [...new Set(this.product.map(p=>p.categoria))]
+  return [...new Set(this.productos.map(p=>p.categoria))]
 }
 
 get equipo(): string[]{
-  return[...new Set(this.product.map(p=>p.equipo))]
+  return[...new Set(this.productos.map(p=>p.equipo))]
 }
 
 onSearch(event:Event):void{
@@ -219,7 +224,7 @@ resetFilters():void{
 }
 
 get filteredProducts():Producto[]{
-  return this.product.filter(p =>
+  return this.productos.filter(p =>
   (this.searchTerm === '' || p.nombre.toLowerCase().includes(this.searchTerm.toLowerCase())) &&
   (this.selectedCategory === '' || p.categoria === this.selectedCategory) &&
   (this.selectedBrand === '' || p.equipo === this.selectedBrand) && 
