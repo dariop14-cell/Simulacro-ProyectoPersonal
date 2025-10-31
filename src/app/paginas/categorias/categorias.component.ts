@@ -194,42 +194,56 @@ export class CategoriasComponent {
 
   searchTerm: string = '';
 
-selectedCategory: string= '';
-selectedBrand: string = '';
-minprecio: number | null = null;
-maxprecio: number | null = null;
+  selectedCategory: string= '';
+  selectedBrand: string = '';
+  minprecio: number | null = null;
+  maxprecio: number | null = null;
 
-get productos(): Producto[]{
-  return this.categorias.flatMap(equipo => equipo.productos)
-}
+  get productos(): Producto[]{
+    return this.categorias.flatMap(equipo => equipo.productos)
+  }
 
-get categoria(): string[]{
-  return [...new Set(this.productos.map(p=>p.categoria))]
-}
+  get categoria(): string[]{
+    return [...new Set(this.productos.map(p=>p.categoria))]
+  }
 
-get equipo(): string[]{
-  return[...new Set(this.productos.map(p=>p.equipo))]
-}
+  get equipo(): string[]{
+    return[...new Set(this.productos.map(p=>p.equipo))]
+  }
 
-onSearch(event:Event):void{
-  event.preventDefault();
-}
+  onSearch(event:Event):void{
+    event.preventDefault();
+  } 
 
-resetFilters():void{
-  this.searchTerm = '';
-  this.selectedCategory = '';
-  this.selectedBrand = '';
-  this.minprecio = null;
-  this.maxprecio = null;
-}
+  resetFilters():void{
+    this.searchTerm = '';
+    this.selectedCategory = '';
+    this.selectedBrand = '';
+    this.minprecio = null;
+    this.maxprecio = null;
+  }
 
-get filteredProducts():Producto[]{
-  return this.productos.filter(p =>
-  (this.searchTerm === '' || p.nombre.toLowerCase().includes(this.searchTerm.toLowerCase())) &&
-  (this.selectedCategory === '' || p.categoria === this.selectedCategory) &&
-  (this.selectedBrand === '' || p.equipo === this.selectedBrand) && 
-  (this.minprecio === null || p.precio>=this.minprecio) &&
-  (this.maxprecio === null || p.precio <= this.maxprecio)
-  )
-}
+  get filteredProducts():Producto[]{
+    return this.productos.filter(p =>
+    (this.searchTerm === '' || p.nombre.toLowerCase().includes(this.searchTerm.toLowerCase())) &&
+    (this.selectedCategory === '' || p.categoria === this.selectedCategory) &&
+    (this.selectedBrand === '' || p.equipo === this.selectedBrand) && 
+    (this.minprecio === null || p.precio>=this.minprecio) &&
+    (this.maxprecio === null || p.precio <= this.maxprecio)
+    )
+  }
+
+  mostrarFiltros: boolean = false;
+  toggleFiltros(): void {
+    this.mostrarFiltros = !this.mostrarFiltros;
+  }
+
+  validarPrecios(): void {
+    if (this.minprecio !== null && this.minprecio < 0){
+      this.minprecio = 0;
+    }
+    if (this.maxprecio !== null && this.maxprecio < 0){
+      this.maxprecio = 0;
+    }
+  }
 }
