@@ -361,3 +361,25 @@ button:active {
 .modal-dialog {
   z-index: 1060;
 }
+
+/* Efecto general para todos los botones del navbar */
+.navbarIcons button,
+.btn-login {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Efecto al pasar el cursor */
+.navbarIcons button:hover svg,
+.btn-login:hover svg {
+  transform: scale(1.3);
+  color: #fff; /* opcional: cambia el color al pasar el cursor */
+}
+
+/* También podés aplicar un pequeño efecto de sombra si querés */
+.navbarIcons button:hover,
+.btn-login:hover {
+  transform: scale(1.1);
+}
