@@ -94,6 +94,42 @@ export class CategoriasComponent {
           precio: 40000,
           categoria: "Buzo",
           equipo: "Ferrari"
+        },
+        {
+          id: 37,
+          nombre: "Campera PUMA bomber Ferrari",
+          img: "https://images.precialo.com/products/campera-puma-estilo-bomber-para-hombre-scuderia-ferrari-team-en-talle-m-en-rojo/79c4dc75-a977-485a-b612-d703303212a4.jpeg",
+          descripcion: "El Rosso Corsa y el negro le dan el toque del automovilismo",
+          precio: 50000,
+          categoria: "Campera",
+          equipo: "Ferrari"
+        },
+        {
+          id: 38,
+          nombre: "Camiseta especial Ferrari Monza 2025",
+          img: "https://store.ferrari.com/dw/image/v2/BGDG_PRD/on/demandware.static/-/Sites-48/default/dwfbf13832/images/zoom/LA0AEf_02_1.jpg?strip=false",
+          descripcion:"Con tonos azules, homenaje al Campeonato de Lauda en 1974",
+          precio: 35000,
+          categoria: "Camiseta",
+          equipo: "Ferrari"
+        },
+        {
+          id:39,
+          nombre: "Gorra Ferrari Lec Ham",
+          img: "https://images.footballfanatics.com/scuderia-ferrari/scuderia-ferrari-puma-classic-cap-black-kids_ss5_p-202359035+u-tseizphkjogea0a7ug3v+v-kqgvsvezjgh2lhhyu8rj.jpg?_hv=2&w=532",
+          descripcion: "Version color negro",
+          precio: 10000,
+          categoria: "Gorra",
+          equipo: "Ferrari"
+        },
+        {
+          id: 40,
+          nombre: "Camiseta Ferrari temporada 2023",
+          img: "https://cdn-1.motorsport.com/images/amp/6gpAkej0/s1000/teamwear-ferrari-2023-1.jpg",
+          descripcion: "De un año agridulce para la escuderia",
+          precio: 25000,
+          categoria: "Camiseta",
+          equipo: "Ferrari"
         }
       ]
     },
