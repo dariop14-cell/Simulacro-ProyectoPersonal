@@ -284,6 +284,42 @@ export class CategoriasComponent {
           precio: 15000,
           categoria: "Gorra",
           equipo: "Mercedes"
+        },
+        {
+          id: 49,
+          nombre: "Buzo Mercedes AMG x Adidas F1",
+          img: "https://production.cdn.vaypol.com/variants/9rplf8xafmxhakd4abjrttcvvslf/e82c8d6171dd25bb538f2e7263b5bc7dfc6a79352d85923074be76df53fbc6f4",
+          descripcion:"Primer modelo de la colaboracion de la marca alemana y las 3 tiras",
+          precio: 30000,
+          categoria:"Buzo",
+          equipo:"Mercedes"
+        },
+        {
+          id:50,
+          nombre:"Camiseta de equipo Mercedes AMG",
+          img:"https://shop.mercedesamgf1.com/cdn/shop/files/JW5361_1_APPAREL_Photography_FrontCenterView_grey280125280125.jpg?v=1738588948&width=3200",
+          descripcion:"Version color negro 2025",
+          precio:25000,
+          categoria:"Camiseta",
+          equipo:"Mercedes"
+        },
+        {
+          id:51,
+          nombre:"Camiseta de Equipo Mercedes AMG",
+          img:"https://fueler.store/cdn/shop/files/mercedes-amg-petronas-2025-team-t-shirt-fuelertm-jx5798-xs-fueler-store-41491.jpg?v=1759273345&width=1080",
+          descripcion:"Version color blanco 2025",
+          precio:25000,
+          categoria:"Camiseta",
+          equipo:"Mercedes"
+        },
+        {
+          id:52,
+          nombre:"Minicasco George Russell 2025",
+          img:"https://www.racingdirect.com/resize/Shared/Images/Product/Bell/2023_George_Russell_1.jpg?lr=f&bw=1000&bh=1000",
+          descripcion:"Modelo en escala 1:2",
+          precio:50000,
+          categoria:"Replica a escala",
+          equipo:"Mercedes"
         }
       ]
     }
