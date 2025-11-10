@@ -53,6 +53,42 @@ export class CategoriasComponent {
           precio: 35000,
           categoria: "Camiseta",
           equipo: "McLaren"
+        },
+        {
+          id:45,
+          nombre:"Buzo McLaren F1 black edition",
+          img:"https://assets.digitalcontent.marksandspencer.app/images/w_2560,q_auto,f_auto/SD_04_T87_7867C_Y0_X_EC_90/Cotton-Rich-McLaren-Hoodie-6-16-Yrs-",
+          descripcion:"Buzo en conmemoración del campeonato mundial",
+          precio: 45000,
+          categoria:"Buzo",
+          equipo: "McLaren"
+        },
+        {
+          id:46,
+          nombre:"Camiseta de equipo McLaren F1 2025",
+          img:"https://armadioindia.com/cdn/shop/files/1-Recovered1_e1fa299b-cf42-45e1-b967-82dde9ab94f6.jpg?v=1753527751&width=1445",
+          descripcion:"Camiseta oficial para la temporada 2025",
+          precio:25000,
+          categoria:"Camiseta",
+          equipo:"McLaren"
+        },
+        {
+          id: 47,
+          nombre:"McLaren F1 MCL38 escala 1:43",
+          img:"https://silverstonemuseum.store/wp-content/uploads/2025/10/Lando-Norris-McLaren-F1-MCL38-Model-Car-with-Helmet-%E2%80%93-1-43-Scale-768x1024.jpg",
+          descripcion:"Coche de Lando Norris en replica a escala 1:43",
+          precio:60000,
+          categoria:"Replica a escala",
+          equipo: "McLaren"
+        },
+        {
+          id: 48,
+          nombre: "Camiseta alternativa McLaren F1 2025",
+          img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlqF4FS4qoc7GNe6Yhay4iDwMpEW-eWpmo-g&s",
+          descripcion:"Segunda equipación del equipo 'Papaya'",
+          precio: 25000,
+          categoria:"Camiseta",
+          equipo:"McLaren"
         }
       ]
     },
@@ -158,7 +194,7 @@ export class CategoriasComponent {
           id: 23,
           nombre: "Remera RB Japanese GP",
           img: "https://www.cmcmotorsports.com/cdn/shop/files/TU14431-001-01.jpg?v=1743189466",
-          descripcion: "Camiseta edicion especial",
+          descripcion: "Camiseta edicion especial GP de Japon 2025",
           precio: 30000,
           categoria: "Camiseta",
           equipo: "Red Bull"
@@ -171,6 +207,42 @@ export class CategoriasComponent {
           precio: 15000,
           categoria: "Gorra",
           equipo: "Red Bull"
+        },
+        {
+          id: 41,
+          nombre: "Red Bull Racing sueter",
+          img:"https://fueler.store/cdn/shop/files/red-bull-racing-2025-quarter-zip-sweatshirt-fuelertm-tu9871-020-s-fueler-store-82638.jpg?v=1759273438&width=3000",
+          descripcion:"Buzo estilo cierre alto azul",
+          precio: 25000,
+          categoria: "Buzo",
+          equipo: "Red Bull"
+        },
+        {
+          id: 42,
+          nombre: "Red Bull white cap",
+          img:"https://images.footballfanatics.com/red-bull-racing/red-bull-racing-new-era-9seventy-special-edition-japan-gp-cap-white_ss5_p-202169074+u-mntstj8jy6mhrhzr5jps+v-fwheiwnel5id62h1htgk.jpg?_hv=2&w=532",
+          descripcion:"Gorra ambiente blanca",
+          precio:15000,
+          categoria: "Gorra",
+          equipo: "Red Bull"
+        },
+        {
+          id: 43,
+          nombre:"Campera de lluvia Red Bull Racing",
+          img:"https://m.media-amazon.com/images/I/71gTGBgAg7L.jpg",
+          descripcion: "Edicion temporada F1 2023",
+          precio: 50000,
+          categoria: "Campera",
+          equipo:"Red Bull"
+        },
+        {
+          id: 44,
+          nombre: "Buzo Red Bull gris F1 2024",
+          img:"https://i.ebayimg.com/images/g/7iAAAOSwyvhj7sI4/s-l400.jpg",
+          descripcion:"Versión en color grisaseo del modelo",
+          precio:30000,
+          categoria:"Buzo",
+          equipo:"Red Bull"
         }
       ]
     },
