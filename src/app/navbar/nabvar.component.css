@@ -378,7 +378,7 @@ button:active {
   color: #fff; /* opcional: cambia el color al pasar el cursor */
 }
 
-/* También podés aplicar un pequeño efecto de sombra si querés */
+/* efecto de sombra  */
 .navbarIcons button:hover,
 .btn-login:hover {
   transform: scale(1.1);

@@ -20,6 +20,7 @@ export class CarritoService {
     }
   }
   
+  
   eliminarDelCarrito(productoId: number) {
     const productos = this.carritoSubject.getValue().filter(p => p.producto.id !== productoId)
     this.carritoSubject.next(productos)
