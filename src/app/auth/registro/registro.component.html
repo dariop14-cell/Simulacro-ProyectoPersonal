@@ -1,0 +1,49 @@
+<div class="modal-backdrop" *ngIf="mostrarModalRegistro"></div>
+
+<div class="modal-container" *ngIf="mostrarModalRegistro">
+  <div class="modal-content modal-login">
+
+    <!-- CABECERA -->
+    <div class="modal-header">
+      <h5 class="modal-title">Crear Cuenta</h5>
+      <button type="button"
+              class="btn-close"
+              aria-label="Close"
+              (click)="cerrarModalRegistro()">
+        X
+      </button>
+    </div>
+
+    <!-- CUERPO -->
+    <div class="modal-body text-center">
+
+      <h3>INGRESE UN CORREO:</h3>
+      <input 
+        type="email"
+        placeholder="@email.com"
+        [(ngModel)]="email"
+      />
+
+      <h3>CREA UNA CONTRASEÑA:</h3>
+      <input 
+        type="password"
+        placeholder="Nueva contraseña..."
+        [(ngModel)]="password"
+      />
+
+      <button type="button"
+              class="btn-acceder"
+              (click)="crearCuenta()">
+        CREAR CUENTA
+      </button>
+    </div>
+
+    <!-- PIE -->
+    <div class="modal-footer">
+      <span class="der">
+        ¿Ya tienes cuenta?
+        <a role="button" (click)="abrirModalLogin()">Iniciar Sesión</a>
+      </span>
+    </div>
+  </div>
+</div>
