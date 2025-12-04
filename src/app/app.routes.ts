@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { InicioComponent } from './paginas/inicio/inicio.component';
-import { ContactoComponent } from './paginas/contacto/contacto.component';
 import { ProductoComponent } from './paginas/producto/producto.component';
 import { CarritoComponent } from './paginas/carrito/carrito.component';
 import { FavoritosComponent } from './paginas/favoritos/favoritos.component';
@@ -10,6 +9,7 @@ import { TicketComponent } from './paginas/ticket/ticket.component';
 import { AdminComponent } from './paginas/admin/admin.component';
 import { AdminGuard } from './guards/admin.guard';
 import { RegistroComponent } from './auth/registro/registro.component';
+import { LoginComponent } from './auth/login/login.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: '/inicio',pathMatch:'full'},
@@ -17,7 +17,6 @@ export const routes: Routes = [
     { path: '**', redirectTo: 'inicio' },
     {path: 'inicio',component:InicioComponent},
     {path: 'producto', component:ProductoComponent},
-    {path: 'contacto', component:ContactoComponent},
     {path: 'categorias', component:CategoriasComponent},
     {path: 'nuestraempresa', component:NuestraempresaComponent},
     {path: 'carrito', component:CarritoComponent},
@@ -27,5 +26,6 @@ export const routes: Routes = [
      component:AdminComponent,
      canActivate: [AdminGuard]
     },
-    {path: 'registro', component:RegistroComponent}
+    {path: 'registro', component:RegistroComponent},
+    {path: 'login', component:LoginComponent}
 ];

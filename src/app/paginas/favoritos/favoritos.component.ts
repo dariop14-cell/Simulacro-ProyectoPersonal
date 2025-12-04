@@ -11,6 +11,7 @@ import { CarritoService } from '../../servicios/carrito.service';
   styleUrl: './favoritos.component.css'
 })
 export class FavoritosComponent implements OnInit{
+  
   productosFavorito: { producto: Producto; cantidad: number }[] = []
 
   constructor(private carritoService: CarritoService,private favoritosService: FavoritosService) { }

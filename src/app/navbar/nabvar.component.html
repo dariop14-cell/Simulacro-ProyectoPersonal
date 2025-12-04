@@ -60,52 +60,16 @@
             </div>
         </div>
         
-
         <!-- Botones de Inicio de Sesion -->
-        <button type="button" class="btn-login mx-1 d-flex align-items-center gap-2" id="botonAcceder"
-            (click)="abrirModalSesion()">
+        <button type="button" class="btn-login mx-1 d-flex align-items-center gap-2" id="botonAcceder" routerLink="/login">
             <svg xmlns="http://www.w3.org/2000/svg"  width="22" height="22" fill="currentColor" class="bi bi-person-fill"
                 viewBox="0 0 16 16">
                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
             </svg>
         </button>
 
-        <!--Modal de Inicio de sesion-->
-        <div *ngIf="mostrarModalSesion" class="modal show d-block fondo-desenfocado" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-md" role="document">
-                <div class="modal-content modal-login">
-        
-                    <!--Cabeza del modal-->
-                    <div class="modal-header">
-                        <h5 class="modal-title">Iniciar Sesión</h5>
-                        <button type="button" class="btn-close" aria-label="Close" (click)="cerrarModalSesion()">X</button>
-                    </div>
-        
-                    <!--cuerpo del modal-->
-                    <div class="modal-body text-center">
-        
-                        <h3>INGRESE SU CORREO:</h3>
-                        <input type="email" placeholder="@email.com" />
-        
-                        <h3>INGRESE SU CONTRASEÑA:</h3>
-                        <input type="password" placeholder="contraseña..." />
-        
-                        <p class="olvide">¿Olvidó su contraseña?</p>
-        
-                        <button type="button" class="btn-acceder">ACCEDER</button>
-                    </div>
-        
-                    <!--pie del modal-->
-                    <div class="modal-footer">
-                        <span class="izq">Recordarme</span>
-                        <span class="der">¿No tienes cuenta? <a role="button" (click)="redireccionRegistro()">Registrate</a></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!--Boton de Registro-->
-        <button type="button" class="btn-login mx-1 d-flex align-items-center gap-2" id="botonRegistro"
+        <button type="button" class="btn-login mx-1 d-flex align-items-center gap-2" id="botonRegistro" routerLink="/registro"
             (click)="abrirModalRegistro()">
             <svg xmlns="http://www.w3.org/2000/svg"  width="22" height="22" fill="currentColor" class="bi bi-person-fill-add"
                 viewBox="0 0 16 16">
@@ -114,33 +78,5 @@
                 <path d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4" />
             </svg>
         </button>
-
-        <!--Modal de Registro
-        <div *ngIf="mostrarModalRegistro" class="modal show d-block fondo-desenfocado" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-md" role="document">
-                <div class="modal-content modal-login">
-        
-                    <div class="modal-header">
-                        <h5 class="modal-title">Crear Cuenta</h5>
-                        <button type="button" class="btn-close" aria-label="Close" (click)="cerrarModalRegistro()">X</button>
-                    </div>
-        
-                    <div class="modal-body text-center">
-                        <h3>INGRESE UN CORREO:</h3>
-                        <input type="email" placeholder="@email.com" />
-        
-                        <h3>CREE UNA CONTRASEÑA:</h3>
-                        <input type="password" placeholder="nueva contraseña..." />
-        
-                        <button type="button" class="btn-acceder">CREAR CUENTA</button>
-                    </div>
-        
-                    <div class="modal-footer">
-                        <span></span>
-                        <span class="der">¿Ya tienes cuenta? <a role="button" (click)="abrirModalLogin()">Iniciar Sesión</a></span>
-                    </div>
-                </div>
-            </div>
-        </div>-->
     </div>
 </nav>
