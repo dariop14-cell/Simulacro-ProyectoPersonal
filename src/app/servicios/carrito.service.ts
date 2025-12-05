@@ -1,5 +1,4 @@
-import { Injectable } from '@angular/core';
-import { Producto } from '../model/productos.model';
+import { Injectable } from '@angular/core'; 
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
