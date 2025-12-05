@@ -23,7 +23,7 @@ export class CategoriasComponent {
   /*agregarFavorito(product: Producto){
     this.favoritosService.agregarAfavoritos(product)
     alert('Producto agregado a la lista de favoritos')
-  }*/
+  }
 
   searchTerm: string = '';
 
@@ -32,17 +32,17 @@ export class CategoriasComponent {
   minprecio: number | null = null;
   maxprecio: number | null = null;
 
-  get productos(): Producto[]{
-    return this.categorias.flatMap(equipo => equipo.productos)
-  }
+  //get productos(): Producto[]{
+  //  return this.categorias.flatMap(equipo => equipo.productos)
+  //}
 
-  get categoria(): string[]{
-    return [...new Set(this.productos.map(p=>p.categoria))]
-  }
+  //get categoria(): string[]{
+  //  return [...new Set(this.productos.map(p=>p.categoria))]
+  //}
 
-  get equipo(): string[]{
-    return[...new Set(this.productos.map(p=>p.equipo))]
-  }
+  //get equipo(): string[]{
+  //  return[...new Set(this.productos.map(p=>p.equipo))]
+  //}
 
   onSearch(event:Event):void{
     event.preventDefault();
@@ -57,7 +57,7 @@ export class CategoriasComponent {
   }
 
   get filteredProducts():Producto[]{
-    return this.productos.filter(p =>
+  //  return this.productos.filter(p =>
     (this.searchTerm === '' || p.nombre.toLowerCase().includes(this.searchTerm.toLowerCase())) &&
     (this.selectedCategory === '' || p.categoria === this.selectedCategory) &&
     (this.selectedBrand === '' || p.equipo === this.selectedBrand) && 
@@ -78,5 +78,5 @@ export class CategoriasComponent {
     if (this.maxprecio !== null && this.maxprecio < 0){
       this.maxprecio = 0;
     }
-  }
+  }*/
 }

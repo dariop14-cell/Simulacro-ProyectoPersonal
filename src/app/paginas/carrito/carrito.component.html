@@ -1,40 +1,78 @@
-<h1> Carrito de Compras</h1>
-<div *ngIf="productosEnCarrito.length === 0">
-    <p>No hay productos en el Carrito</p>
-</div>
+<div class="container mt-4">
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Imagen</th>
-            <th>Nombre</th>
-            <th>Descripcion</th>
-            <th>Precio</th>
-            <th>Cantidad</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
+    <h2 class="mb-3">Carrito de compras</h2>
 
-        <tr *ngFor="let item of productosEnCarrito; let i = index">
-            <td><img [src]="item.producto.img" alt="{{item.producto.nombre}}" style="width: 50px; height: 50px;">
-            </td>
-            <td>{{ item.producto.nombre }}</td>
-            <td>{{ item.producto.descripcion }}</td>
-            <td>{{ item.producto.precio | number: '1.2-2'}}$</td>
-            <td>
-                <button class="btn-cantidad" (click)="quitarCantidad(i)">-</button>
-                {{item.cantidad}}
-                <button class="btn-aggcant" (click)="agregarCantidad(i)">+</button>
-            </td>
-            <td>
-                <button class="btn-cantidad" (click)="eliminarProducto(item.producto.id)">Eliminar</button>
-            </td>
-        </tr>
-    </tbody>
-</table>
-<button (click) = "realizarCompra()" class="btn btn-success agregacion" [disabled]="productosEnCarrito.length === 0">Realizar Compra</button>
+    <div *ngIf="carrito.length > 0; else vacio">
 
-<div class="text-end mt-4" *ngIf="productosEnCarrito.length > 0">
-    <h4 class="fw-bold">Total : {{ calcularTotal() | number: '1.2-2' }} ARS $</h4>
+        <table class="table table-striped align-middle">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let item of carrito">
+
+                    <!-- Imagen -->
+                    <td>
+                        <img *ngIf="item.imagen" [src]="'http://localhost/api_proyecto/public/uploads/' + item.imagen"
+                            class="thumb" />
+                    </td>
+
+                    <!-- Nombre -->
+                    <td>
+                        <strong>{{ item.nombre }}</strong>
+                    </td>
+
+                    <!-- Precio -->
+                    <td>$ {{ item.precio_unitario }}</td>
+
+                    <!-- Cantidad (editable) -->
+                    <td>
+                        <input type="number" min="1" class="form-control" [value]="item.cantidad"
+                            (change)="cambiarCantidad(item.id_detalle_carrito, $event)">
+                    </td>
+
+                    <!-- Subtotal -->
+                    <td>$ {{ item.subtotal }}</td>
+
+                    <!-- Eliminar -->
+                    <td>
+                        <button class="btn btn-danger btn-sm" (click)="eliminar(item.id_detalle_carrito)">
+                            Eliminar
+                        </button>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="text-end mt-4">
+            <p>Subtotal: <strong>$ {{ total }}</strong></p>
+            <p>Envío: <strong>$ {{ envio }}</strong></p>
+            <p>Total: <strong>$ {{ total + envio }}</strong></p>
+
+            <button class="btn btn-outline-danger me-2" (click)="vaciarCarrito()">
+                Vaciar carrito
+            </button>
+
+            <button class="btn btn-primary" (click)="irACompra()">
+                Finalizar compra
+            </button>
+        </div>
+
+    </div>
+
+    <ng-template #vacio>
+        <div class="alert alert-info text-center">
+            Tu carrito está vacío.
+        </div>
+    </ng-template>
+
 </div>
