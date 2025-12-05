@@ -24,7 +24,7 @@ export class AdminGuard implements CanActivate {
 
     // Si no está logueado o no es admin,
     // lo redirige a la pantalla de inicio de sesión.
-    this.router.navigate(['/inicio-sesion']);
+    this.router.navigate(['/login']);
 
     return false; // Bloquea el acceso a la ruta protegida.
   }

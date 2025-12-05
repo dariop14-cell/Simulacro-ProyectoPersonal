@@ -150,7 +150,6 @@ export class AdminComponent {
       error: () => alert("Error eliminando producto")
     });
   }
-
   // Resetea el formulario y vuelve al estado inicial.
   reset() {
     this.formulario.reset();

@@ -46,7 +46,7 @@ export class RegistroComponent {
         alert('Registro exitoso. Ahora puede iniciar sesión.');
 
         // Redirige al usuario a la pantalla de login.
-        this.router.navigate(['/inicio-sesion']);
+        this.router.navigate(['/login']);
       },
 
       // Si ocurre un error en el backend o en la red:
