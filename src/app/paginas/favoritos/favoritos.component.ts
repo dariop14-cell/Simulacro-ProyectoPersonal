@@ -10,4 +10,4 @@ import { CarritoService } from '../../servicios/carrito.service';
   templateUrl: './favoritos.component.html',
   styleUrl: './favoritos.component.css'
 })
-export class FavoritosComponent { }
+export class FavoritosComponent {}

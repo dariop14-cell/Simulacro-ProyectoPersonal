@@ -5,8 +5,6 @@ import { Producto } from '../../model/productos.model';
 import { CarritoService } from '../../servicios/carrito.service';
 import { FavoritosService } from '../../servicios/favoritos.service';
 import { ProductService } from '../../servicios/product.service';
-
-
   
 @Component({
   selector: 'app-producto',
@@ -123,4 +121,4 @@ get filteredProducts():Producto[]{
   (this.maxprecio === null || p.precio <= this.maxprecio)
   )
 }
-  */
+*/

@@ -3,7 +3,18 @@
     <h2 class="titulo">CREAR CUENTA</h2>
 
     <form (ngSubmit)="registrar()">
- 
+      <!-- NOMBRE -->
+      <label class="register-label" for="email">SU NOMBRE:</label>
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        class="register-input"
+        placeholder="ingrese su nombre"
+        [(ngModel)]="nuevoUsuario.nombre"
+        required
+      />
+
       <!-- CORREO -->
       <label class="register-label" for="email">INGRESE UN CORREO:</label>
       <input

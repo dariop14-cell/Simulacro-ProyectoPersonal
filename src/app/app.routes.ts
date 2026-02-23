@@ -10,7 +10,7 @@ import { AdminComponent } from './paginas/admin/admin.component';
 import { AdminGuard } from './guards/admin.guard';
 import { RegistroComponent } from './auth/registro/registro.component';
 import { LoginComponent } from './auth/login/login.component';
- 
+
 export const routes: Routes = [
     {path: '', redirectTo: '/inicio',pathMatch:'full'},
     // Ruta comodín para cualquier ruta inexistente
@@ -23,8 +23,8 @@ export const routes: Routes = [
     {path: 'favoritos', component:FavoritosComponent},
     {path: 'ticket', component:TicketComponent},
     {path: 'admin', 
-     component:AdminComponent,
-     canActivate: [AdminGuard]
+    component:AdminComponent,
+    canActivate: [AdminGuard]
     },
     {path: 'registro', component:RegistroComponent},
     {path: 'login', component:LoginComponent}
