@@ -23,7 +23,7 @@ export const routes: Routes = [
     {path: 'nuestraempresa', component:NuestraempresaComponent},
     {path: 'carrito', component:CarritoComponent},
     {path: 'favoritos', component:FavoritosComponent},
-     {
+    {
     path: 'ticket/:id',
     loadComponent: () =>
       import('./paginas/ticket/ticket.component')

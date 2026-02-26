@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { AuthService } from '../servicios/auth.service';
 
 @Component({
   selector: 'app-nabvar',
@@ -9,36 +10,23 @@ import { CommonModule } from '@angular/common';
   templateUrl: './nabvar.component.html',
   styleUrl: './nabvar.component.css'
 })
-export class NabvarComponent {
-  mostrarModalSesion: boolean = false;
+export class NabvarComponent implements OnInit {
+    usuario: any = null;
 
-  abrirModalSesion(){
-    this.mostrarModalSesion = true;
+  constructor(public authService: AuthService) {}
+
+  ngOnInit() {
+    // Cargar usuario al iniciar
+    this.usuario = this.authService.getUsuario();
+
+    // Escuchar cuando alguien hace login
+    this.authService.loginEvent.subscribe(() => {
+      this.usuario = this.authService.getUsuario();
+    });
   }
 
-  cerrarModalSesion(){
-    this.mostrarModalSesion = false;
+  cerrarSesion() {
+    this.authService.logout();
+    this.usuario = null;
   }
-
-  redireccionRegistro(){
-    this.mostrarModalSesion = false;
-    this.mostrarModalRegistro = true;
-  }
-
-
-  mostrarModalRegistro = false;
-
-  abrirModalRegistro() {
-    this.mostrarModalRegistro = true;
-  }
-
-  cerrarModalRegistro() {
-    this.mostrarModalRegistro = false;
-  }
-
-  abrirModalLogin() {
-    this.mostrarModalRegistro = false;
-    this.mostrarModalSesion = true; 
-  }
-  
 }

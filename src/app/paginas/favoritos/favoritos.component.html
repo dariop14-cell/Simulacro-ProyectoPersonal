@@ -1,29 +1,64 @@
-<!--
-<h1>Bienvenido a tu listado de Favoritos</h1>
-<div *ngIf="productosFavorito.length === 0">
-    <h4>No hay productos en tu listado de Favoritos</h4>
+<div class="container mt-4">
+
+    <h2 class="mb-3">Mis favoritos</h2>
+
+    <div *ngIf="favoritos.length > 0; else vacio">
+
+        <table class="table table-striped align-middle">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let item of favoritos">
+
+                    <!-- Imagen -->
+                    <td>
+                        <img *ngIf="item.imagen"
+                            [src]="'http://localhost/api_proyecto/public/uploads/' + item.imagen"
+                            class="thumb" />
+                    </td>
+
+                    <!-- Nombre -->
+                    <td>
+                        <strong>{{ item.nombre }}</strong>
+                    </td>
+
+                    <!-- Precio -->
+                    <td>$ {{ item.precio }}</td>
+
+                    <!-- Acciones -->
+                    <td>
+
+                        <!-- Mover al carrito -->
+                        <button class="btn btn-success btn-sm me-2"
+                                (click)="moverAlCarrito(item)">
+                            Agregar al carrito
+                        </button>
+
+                        <!-- Quitar de favoritos -->
+                        <button class="btn btn-outline-danger btn-sm"
+                                (click)="eliminarFavorito(item.id)">
+                            Quitar
+                        </button>
+
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <ng-template #vacio>
+        <div class="alert alert-info text-center">
+            No tienes productos en tu lista de favoritos.
+        </div>
+    </ng-template>
+
 </div>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>Imagen</th>
-            <th>Nombre</th>
-            <th>Descripcion</th>
-            <th>Precio</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let item of productosFavorito;let i = index">
-            <td><img [src]="item.producto.img" alt="{{ item.producto.nombre }}" style="width: 50px; height: 50px;"></td>
-            <td>{{ item.producto.nombre }}</td>
-            <td>{{ item.producto.descripcion }}</td>
-            <td>{{ item.producto.precio | number: '1.2-2'}}$</td>
-            <td>
-                <button class="btn btn-success subircarrito" (click)="agregar(item.producto)" id="subiralcarrito">Agregar al carrito</button>
-            </td>
-        </tr>
-    </tbody>
-</table>
--->
-

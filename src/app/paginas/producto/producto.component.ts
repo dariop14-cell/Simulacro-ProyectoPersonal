@@ -5,6 +5,7 @@ import { Producto } from '../../model/productos.model';
 import { CarritoService } from '../../servicios/carrito.service';
 import { FavoritosService } from '../../servicios/favoritos.service';
 import { ProductService } from '../../servicios/product.service';
+import { AuthService } from '../../servicios/auth.service';
   
 @Component({
   selector: 'app-producto',
@@ -17,7 +18,6 @@ export class ProductoComponent {
   // Lista de productos obtenidos desde el backend.
   productos: Producto[] = [];
 
-  // Estado para mostrar un spinner o mensaje de carga.
   cargando = true;
 
   // Texto para mostrar un error en la interfaz si algo falla.
@@ -31,7 +31,9 @@ export class ProductoComponent {
     private carritoService: CarritoService,
 
     // Servicio encargado de gestionar los productos favoritos del usuario.
-    private favoritoService: FavoritosService
+    private favoritoService: FavoritosService,
+
+    private authService: AuthService 
   ) {}
 
   // Método del ciclo de vida, se ejecuta al inicializar el componente.
@@ -60,6 +62,11 @@ export class ProductoComponent {
 
   // Agrega un producto al carrito llamando al servicio correspondiente.
   agregarAlCarrito(producto: Producto): void {
+    if (!this.authService.isLoggedIn()) {
+    alert("Debes registrarte o iniciar sesión para agregar productos al carrito.");
+    return; 
+  }
+
     this.carritoService.agregarAlCarrito(producto).subscribe({
       next: () => console.log('Producto agregado'),
       error: err => console.error(err)
@@ -68,6 +75,11 @@ export class ProductoComponent {
 
   // Agrega un producto a la lista de favoritos del usuario.
   agregarAFavoritos(producto: Producto): void {
+    if (!this.authService.isLoggedIn()) {
+    alert("Debes registrarte o iniciar sesión para agregar productos a favoritos.");
+    return;
+  }
+
     this.favoritoService.agregarFavorito(producto).subscribe({
       next: () => console.log('Agregado'),
       error: (err) => console.error(err)

@@ -16,16 +16,20 @@ export class AdminGuard implements CanActivate {
   // Método que Angular ejecuta antes de permitir el acceso a una ruta protegida.
   canActivate(): boolean {
 
-    // Verifica primero si el usuario tiene sesión activa
-    // y luego si su rol es 'admin'.
-    if (this.authService.isLoggedIn() && this.authService.esAdmin()) {
-      return true; // Permite el acceso a la ruta.
-    }
-
-    // Si no está logueado o no es admin,
-    // lo redirige a la pantalla de inicio de sesión.
+ // Si NO está logueado → lo manda a login
+  if (!this.authService.isLoggedIn()) {
     this.router.navigate(['/login']);
-
-    return false; // Bloquea el acceso a la ruta protegida.
+    return false;
   }
+
+  // Si está logueado pero NO es admin → acceso denegado
+  if (!this.authService.esAdmin()) {
+    alert('Acceso denegado');
+    this.router.navigate(['/inicio']);
+    return false;
+  }
+
+  // Si es admin → permite acceso
+  return true;
+}
 }

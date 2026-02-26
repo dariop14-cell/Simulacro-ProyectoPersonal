@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        <div class="navbarIcons">
+        <div *ngIf="usuario"  class="navbarIcons">
             <!--btn Favoritos-->
             <div>
                 <button class="botonFavoritos" routerLink="/favoritos">
@@ -39,23 +39,54 @@
             </div>
         </div>
         
-        <!-- Botones de Inicio de Sesion -->
-        <button type="button" class="btn-login mx-1 d-flex align-items-center gap-2" id="botonAcceder" routerLink="/login">
-            <svg xmlns="http://www.w3.org/2000/svg"  width="22" height="22" fill="currentColor" class="bi bi-person-fill"
-                viewBox="0 0 16 16">
-                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-            </svg>
-        </button>
+        <div *ngIf="!authService.isLoggedIn()" class="d-flex align-items-center gap-3">    
+            <!-- Botones de Inicio de Sesion -->
+            <button type="button" class="btn-login mx-1 d-flex align-items-center gap-2" id="botonAcceder" routerLink="/login">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-fill"
+                    viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                </svg>
+            </button>
+        
+            <!--Boton de Registro-->
+            <button type="button" class="btn-login mx-1 d-flex align-items-center gap-2" id="botonRegistro"
+                routerLink="/registro">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-fill-add"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                    <path
+                        d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4" />
+                </svg>
+            </button>
+        </div>
 
-        <!--Boton de Registro-->
-        <button type="button" class="btn-login mx-1 d-flex align-items-center gap-2" id="botonRegistro" routerLink="/registro"
-            (click)="abrirModalRegistro()">
-            <svg xmlns="http://www.w3.org/2000/svg"  width="22" height="22" fill="currentColor" class="bi bi-person-fill-add"
-                viewBox="0 0 16 16">
-                <path
-                    d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                <path d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4" />
-            </svg>
-        </button>
+        <!-- SI está logueado -->
+        <div *ngIf="usuario" class="d-flex align-items-center gap-2">
+
+            <!-- Botón Panel Admin SOLO si es admin -->
+            <button *ngIf="authService.esAdmin()" routerLink="/admin" class="admin-pill" title="Panel de Administración">
+                Admin
+            </button>
+
+            <!-- Nombre del usuario -->
+            <span class="text-white fw-semibold">
+                {{ usuario.nombre }}
+            </span>
+
+            <!-- Botón cerrar sesión -->
+            <button (click)="cerrarSesion()" class="btn-login mx-1 d-flex align-items-center justify-content-center"
+                title="Cerrar sesión">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
+                    <path fill-rule="evenodd"
+                        d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+                </svg>
+            </button>
+
+        </div>
+
     </div>
 </nav>

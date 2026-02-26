@@ -383,3 +383,20 @@ button:active {
 .btn-login:hover {
   transform: scale(1.1);
 }
+
+.admin-pill {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 4px 14px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.admin-pill:hover {
+  background-color: white;
+  color: #d62828; /* rojo del navbar */
+  transform: scale(1.05);
+}
