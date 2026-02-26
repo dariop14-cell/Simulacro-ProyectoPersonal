@@ -49,15 +49,15 @@ export class ProductService {
   // Como Angular no manda PUT con FormData correctamente,
   // se usa técnica _method=PUT que el backend interpreta.
   // ============================================================
-  actualizarProducto(id: number, formData: FormData): Observable<any> {
-    return this.http.post(
-      `${this.apiUrl}/${id}?_method=PUT`,
-      formData,
-      {
-        headers: this.getAuthHeaders(false)
-      }
-    );
-  }
+ actualizarProducto(id: number, formData: FormData): Observable<any> {
+  formData.append("_method", "PUT");
+
+  return this.http.post(`${this.apiUrl}/${id}`, formData, {
+    headers: this.getAuthHeaders(false)
+  });
+}
+
+
 
   // ============================================================
   // ELIMINAR PRODUCTO (solo admin)
@@ -89,6 +89,7 @@ export class ProductService {
     if (json) {
       headers['Content-Type'] = 'application/json';
     }
+
     return new HttpHeaders(headers);
   }
 }

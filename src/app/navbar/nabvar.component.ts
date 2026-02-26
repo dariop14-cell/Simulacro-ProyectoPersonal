@@ -40,6 +40,5 @@ export class NabvarComponent {
     this.mostrarModalRegistro = false;
     this.mostrarModalSesion = true; 
   }
-
   
 }

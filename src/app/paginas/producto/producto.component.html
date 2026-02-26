@@ -24,7 +24,7 @@
 
     <!-- Listado de productos -->
     <div class="row g-4">
-        <div *ngFor="let producto of producto" class="col-md-4">
+        <div *ngFor="let producto of productos" class="col-md-4">
             <div class="card h-100 shadow-sm">
                 <img [src]="'http://localhost/api_proyecto/public/uploads/' + producto.img" class="card-img-top"
                     alt="{{ producto.nombre }}" style="object-fit: cover; height: 220px;" />

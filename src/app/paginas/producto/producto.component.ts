@@ -13,7 +13,9 @@ import { ProductService } from '../../servicios/product.service';
   styleUrl: './producto.component.css'
 })
 export class ProductoComponent {
-  producto: Producto[] = []
+  
+  // Lista de productos obtenidos desde el backend.
+  productos: Producto[] = [];
 
   // Estado para mostrar un spinner o mensaje de carga.
   cargando = true;
@@ -43,7 +45,7 @@ export class ProductoComponent {
 
       // Si la petición es exitosa:
       next: (res: any) => {
-        this.producto = res;    // Se asigna la lista recibida.
+        this.productos = res;    // Se asigna la lista recibida.
         this.cargando = false;   // Finaliza el estado de carga.
       },
 
@@ -72,53 +74,3 @@ export class ProductoComponent {
     });
   }
 }
-
-  /*
-  constructor(private carritoService: CarritoService, private favoritosService: FavoritosService){ }
-  agregar(product: Producto){
-    this.carritoService.agregarAlCarrito(product)
-    alert('Producto agregado al carrito')
-  }
-
-  agregarFavorito(product: Producto){
-    this.favoritosService.agregarAfavoritos(product)
-    alert('Producto agregado a la lista de favoritos')
-  }
-
-searchTerm: string = '';
-
-selectedCategory: string= '';
-selectedBrand: string = '';
-minprecio: number | null = null;
-maxprecio: number | null = null;
-
-get categoria(): string[]{
-  return [...new Set(this.producto.map(p=>p.categoria))]
-}
-
-get equipo(): string[]{
-  return[...new Set(this.producto.map(p=>p.equipo))]
-}
-
-onSearch(event:Event):void{
-  event.preventDefault();
-}
-
-resetFilters():void{
-  this.searchTerm = '';
-  this.selectedCategory = '';
-  this.selectedBrand = '';
-  this.minprecio = null;
-  this.maxprecio = null;
-}
-
-get filteredProducts():Producto[]{
-  return this.producto.filter(p =>
-  (this.searchTerm === '' || p.nombre.toLowerCase().includes(this.searchTerm.toLowerCase())) &&
-  (this.selectedCategory === '' || p.categoria === this.selectedCategory) &&
-  (this.selectedBrand === '' || p.equipo === this.selectedBrand) && 
-  (this.minprecio === null || p.precio>=this.minprecio) &&
-  (this.maxprecio === null || p.precio <= this.maxprecio)
-  )
-}
-*/

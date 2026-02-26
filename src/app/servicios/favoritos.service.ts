@@ -8,40 +8,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FavoritosService {
-  /*
-  private favoritosSubject = new BehaviorSubject<{producto: Producto; cantidad: number}[]>([]);
-  des$= this.favoritosSubject.asObservable()
-
-  agregarAfavoritos(producto:Producto){
-    const productos = this.favoritosSubject.getValue();
-    const encontrado = productos.find(p => p.producto.id === producto.id)
-
-    if(encontrado){
-      encontrado.cantidad++
-    }else{
-      this.favoritosSubject.next ([...productos, {producto, cantidad :1}])
-    }
-  }
-
-  eliminarDeFavoritos(productoId: number){
-    const productos = this.favoritosSubject.getValue().filter(p => p.producto.id !== productoId)
-    this.favoritosSubject.next(productos)
-  }
-
-  vaciarFavoritos(){
-    this.favoritosSubject.next([])
-  }
-  constructor() { }
-  */
-
-  
+ 
   // URL base para todas las rutas relacionadas con "favoritos".
   // En el backend deberías tener rutas como:
   // GET    /favoritos
   // POST   /favoritos/agregar
   // DELETE /favoritos/eliminar/:id
-
   private apiUrl = 'http://localhost/api_proyecto/public/favoritos';
+
   constructor(private http: HttpClient) {}
 
   // -------------------------------------------------------------------
@@ -94,4 +68,6 @@ export class FavoritosService {
       { headers: this.getAuthHeaders() }
     );
   }
+
 }
+

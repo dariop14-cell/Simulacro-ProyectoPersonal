@@ -11,7 +11,8 @@ import { AuthService } from '../../servicios/auth.service';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-   // Objeto que almacena las credenciales que el usuario ingresará en el formulario.
+ 
+  // Objeto que almacena las credenciales que el usuario ingresará en el formulario.
   // Se enlaza con ngModel en la plantilla.
   usuario = {
     email: '',
@@ -50,7 +51,7 @@ export class LoginComponent {
         alert('Inicio de sesión exitoso');
 
         // Redirige a la página de productos.
-        this.router.navigate(['/productos']);
+        this.router.navigate(['/producto']);
       },
 
       // Si ocurre un error (credenciales incorrectas o fallo del servidor):
@@ -62,5 +63,4 @@ export class LoginComponent {
       }
     });
   }
-
 }
